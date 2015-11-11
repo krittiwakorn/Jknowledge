@@ -12,7 +12,10 @@
 	<title>Bare - Start Bootstrap Template</title>
 
 	<!-- Bootstrap Core CSS -->
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="<?= base_url();?>css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Bootstrap Datable -->
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/media/css/jquery.dataTables.css">
 
 	<!-- Custom CSS -->
 	<style>
@@ -44,7 +47,7 @@
      					<span class="icon-bar"></span>
      					<span class="icon-bar"></span>
      				</button>
-     				<a class="navbar-brand" href="#">Start Bootstrap</a>
+     				<a class="navbar-brand" href="registration">Start Bootstrap</a>
      			</div>
      			<!-- Collect the nav links, forms, and other content for toggling -->
      			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
