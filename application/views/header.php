@@ -50,13 +50,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">เพิ่มคอร์ส</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">เพิ่มแอดมิน</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">รายงาน</a>
                     </li>
                 </ul>
             </div>
