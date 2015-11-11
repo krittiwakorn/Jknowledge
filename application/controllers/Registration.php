@@ -19,7 +19,10 @@
 
 		public function course()
 		{
-			$this->load->view('course');
+			$data = array(
+				'getCourse' => $this->Mo_regis->get_course(),
+				);
+			$this->load->view('course',$data);
 		}
 
 		public function insert_course()

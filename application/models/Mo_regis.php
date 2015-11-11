@@ -31,6 +31,12 @@ class Mo_regis extends CI_Model {
 		redirect('Registration/course','refresh');
 	}
 
+	public function get_course()
+	{
+		$getCourse = $this->db->get('course')->result();
+		return $getCourse;
+	}
+
 }
 
 /* End of file Mo_regis.php */

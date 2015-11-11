@@ -54,6 +54,7 @@
 			<caption>จัดการคอร์สเรียน</caption>
 			<thead  >
 				<tr>
+					<th>course code</th>
 					<th >คอร์สเรียน</th>
 					<th>สถานะ	</th>
 					<th>คอมเม้น</th>
@@ -62,14 +63,17 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>data</td>
-					<td>data</td>
-					<td>data</td>
-					<td class="col-md-2">
-						<?php echo anchor('#', 'แก้ไข','class="btn btn-warning"');?>
-						 &nbsp;&nbsp;
-						<?php echo anchor('#', 'ลบ','class="btn btn-danger"');?>
-					</td>
+					<?php foreach ($getCourse as $course_row) :?>
+						<td class="col-md-2"><?php echo $course_row->course_code;?></td>
+						<td><?php echo $course_row->course_name;?></td>
+						<td><?php echo $course_row->status;?></td>
+						<td><?php echo $course_row->comment;?></td>
+						<td class="col-md-2">
+							<?php echo anchor('#', 'แก้ไข','class="btn btn-warning"');?>
+							&nbsp;&nbsp;
+							<?php echo anchor('#', 'ลบ','class="btn btn-danger"');?>
+						</td>
+					<?php endforeach; ?>
 				</tr>
 			</tbody>
 		</table>
