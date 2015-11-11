@@ -59,6 +59,25 @@
 				$this->course();
 			}
 		}
+
+		public function manage_user()
+		{
+			$data = array('get_users' => $this->db->get('users')->result(), );
+			$this->load->view('manage_user',$data);
+		}
+
+		public function manage_status(){
+		$my_status = $this->input->post('my-checkbox');
+
+		if($my_status === "on"){
+			$update_status = $this->Mo_regis->manage_status($status = "admin");
+			echo  $update_status;
+			print_r($update_status);
+		}else{
+			$update_status = $this->Mo_regis->manage_status($status = "user");
+			echo  $update_status;
+		}
+	}
 	}
 
 	/* End of file welcome.php */

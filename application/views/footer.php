@@ -16,6 +16,10 @@
 		$('table.display').dataTable();
 	});
 </script>
+
+<!-- Bootstrap Switch -->
+<script src="<?php echo base_url();?>js/bootstrap-switch/bootstrap-switch.js"></script>
+
 </body>
 
 </html>

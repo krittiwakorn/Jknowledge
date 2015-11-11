@@ -69,6 +69,16 @@ class Mo_regis extends CI_Model {
 		redirect('Registration/course','refresh');
 	}
 
+	public function manage_status($status){
+		$user_id = $this->input->post('user_id');
+
+		$update_status = $this->db->query('UPDATE users
+			SET user_status = "'.$status.'"
+			WHERE user_id = "'.$user_id.'"
+			');
+		redirect('Registration/manage_user','refresh');
+	}
+
 
 }
 
