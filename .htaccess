@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /Jkhowledge/
+RewriteBase /Jknowledge/
 
 RewriteCond $1 !^(index\.php|css|font-awesome-4.1.0|fonts|images|js|robots\.txt)
 RewriteCond %{REQUEST_URI} ^system.*
