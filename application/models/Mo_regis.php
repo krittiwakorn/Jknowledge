@@ -12,6 +12,7 @@ class Mo_regis extends CI_Model {
 	function insert_course(){  // เพิ่มคอร์สเรียน
 		$course_code = $this->input->post('course_code');
 		$course_name = $this->input->post('course_name');
+		$course_price = $this->input->post('course_price');
 		$status = $this->input->post('status');
 		$comment = $this->input->post('comment');
 
@@ -20,12 +21,13 @@ class Mo_regis extends CI_Model {
 		$data_course = array(
 			'course_code' => $course_code,
 			'course_name' => $course_name,
+			'price' => $course_price,
 			'status' => $status,
 			'comment' => $comment,
 			'id_create' => '11111',
 			'dt_create' => $date,
 			'id_update' => '2222',
-			'dt_update' => $date,
+			// 'dt_update' => $date,
 			);
 		$this->db->insert('course',$data_course);
 		redirect('Registration/course','refresh');
@@ -55,7 +57,7 @@ class Mo_regis extends CI_Model {
 			'id_create' => '11111',
 			// 'dt_create' => $date,
 			'id_update' => '2222',
-			'dt_update' => $date,
+			// 'dt_update' => $date,
 			);
 		$this->db->where('id_course',$course_id);
 		$this->db->update('course',$update_course);

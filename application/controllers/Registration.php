@@ -27,14 +27,15 @@
 
 		public function insert_course()
 		{
-			$this->form_validation->set_rules('course_code', 'course code', 'trim|required|xss_clean|numeric|max_length[11]');
-			$this->form_validation->set_rules('course_name', 'course name', 'trim|required|xss_clean|');
+			$this->form_validation->set_rules('course_code', 'รหัสคอร์สเรียน', 'trim|required|xss_clean|numeric|max_length[11]');
+			$this->form_validation->set_rules('course_name', 'ชื่ออคอร์ส', 'trim|required|xss_clean|');
+			$this->form_validation->set_rules('course_price', 'ราคา', 'trim|required|numeric|xss_clean');
 			// ----set error message----//
 			$this->form_validation->set_message('numeric', 'กรุณากรอก %s เป็นตัวเลข 0-9');
 			$this->form_validation->set_message('required', 'กรุณากรอกข้อมูล %s.');
 
 			if($this->form_validation->run() == FALSE){	//form validation error
-				
+
 				$this->course();		//redirect function course
 				return FALSE;
 			}else{
@@ -52,7 +53,7 @@
 		}
 
 		public function del_course($value='')		//del course
-		{	
+		{
 			if($value != null){
 				$this->Mo_regis->del_course($value);
 			}else{
