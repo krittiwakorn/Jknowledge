@@ -11,7 +11,7 @@
      <link href="<?= base_url();?>css/bootstrap.min.css" rel="stylesheet">
      <!-- Bootstrap Datable -->
      <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/media/css/jquery.dataTables.css">
-     <!-- Bootstrap Switch -->     
+     <!-- Bootstrap Switch -->
      <link href="<?php echo base_url();?>css/bootstrap-switch/bootstrap-switch.css" rel="stylesheet">
      <!-- Custom CSS -->
      <style>
@@ -52,7 +52,7 @@
                                    <?php echo anchor('registration/manage_user', 'เพิ่มแอดมิน');?>
                               </li>
                               <li>
-                                   <a href="#">รายงาน</a>
+                                   <?php echo anchor('registration/present', 'รายงาน');?>
                               </li>
                          </ul>
                     </div>

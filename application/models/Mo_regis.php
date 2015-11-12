@@ -81,6 +81,26 @@ class Mo_regis extends CI_Model {
 		redirect('Registration/manage_user','refresh');
 	}
 
+	public function present()
+	{
+		$Present = $this->db->query('SELECT * , `register_hdr`.`status`as "status_hdr"
+			FROM
+			`register_hdr`
+			INNER JOIN `course` ON `register_hdr`.`id_course` = `course`.`id_course`')->result();
+		return $Present;
+	}
+
+	public function present_id($value='')
+	{
+		$Present = $this->db->query('SELECT * , `register_hdr`.`status`as "status_hdr"
+			FROM
+			`register_hdr`
+			INNER JOIN `course` ON `register_hdr`.`id_course` = `course`.`id_course`
+			WHERE id_register_hdr ="'.$value.'"
+			')->result();
+		return $Present;
+	}
+
 
 }
 

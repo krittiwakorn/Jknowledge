@@ -68,17 +68,34 @@
 		}
 
 		public function manage_status(){
-		$my_status = $this->input->post('my-checkbox');
+			$my_status = $this->input->post('my-checkbox');
 
-		if($my_status === "on"){
-			$update_status = $this->Mo_regis->manage_status($status = "admin");
-			echo  $update_status;
-			print_r($update_status);
-		}else{
-			$update_status = $this->Mo_regis->manage_status($status = "user");
-			echo  $update_status;
+			if($my_status === "on"){
+				$update_status = $this->Mo_regis->manage_status($status = "admin");
+				echo  $update_status;
+				print_r($update_status);
+			}else{
+				$update_status = $this->Mo_regis->manage_status($status = "user");
+				echo  $update_status;
+			}
 		}
-	}
+
+		public function present()
+		{
+			$data = array(
+				'get_regist_hdr' => $this->Mo_regis->present() ,
+				);
+			$this->load->view('present',$data);
+		}
+
+		public function present_info($hdr_id="")
+		{
+			$data =array(
+				'get_hdr_id' => $this->Mo_regis->present_id($hdr_id),
+				);
+			$this->load->view('present_info',$data);
+
+		}
 	}
 
 	/* End of file welcome.php */
