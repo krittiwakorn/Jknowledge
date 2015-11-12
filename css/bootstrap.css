@@ -6581,4 +6581,15 @@ button.close {
     display: none !important;
   }
 }
+
+.fname{ 
+  position: relative;
+  min-height: 1px; 
+  width:50%
+}
+.lname{
+  position: relative;
+  min-height: 1px; 
+  width:50%
+}
 /*# sourceMappingURL=bootstrap.css.map */
