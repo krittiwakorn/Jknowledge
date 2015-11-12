@@ -1,7 +1,7 @@
 <?php $this->load->view('header_register');?>
 <div class="row">
 	<div class="panel panel-primary">
-		<div class="panel-heading">สมัครเรียนออนไลน์</div>
+		<div class="panel-heading" style="font-size:25px;">สมัครเรียนออนไลน์</div>
 		<div class="panel-body">
 		<!-- insert register  -->
 		<?php echo form_open('Registration/insert_register','class="form-horizontal " role="form"');?>
@@ -155,7 +155,28 @@
             	</div>
 			</div>
 			<div class="col-sm-3"></div> 
+		</div> 
+<!-- 		
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6"><label > + เพิ่มเพื่อน</label></div>
+			<div class="col-sm-3"></div> 
+		</div> 
+		<hr> 
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<div class="form-group ">  
+	                <label >ชื่อ *  
+	                	<input type="radio" name="is_iti" value="1"  checked> นาย 
+	                	<input type="radio" name="is_iti" value="2"> นางสาว 
+	                </label>
+	                <input type="text" id="firstname" name="firstname" class="form-control" style="font-size: 20px; height:40px;" required="required">
+				</div>
+			</div>
+			<div class="col-sm-3"></div> 
 		</div>
+ -->
 		<div class="row">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
