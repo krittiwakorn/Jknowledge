@@ -81,7 +81,7 @@ class Mo_regis extends CI_Model {
 		redirect('Registration/manage_user','refresh');
 	}
 
-	public function present()
+	public function report()
 	{
 		$Present = $this->db->query('SELECT * , `register_hdr`.`status`as "status_hdr"
 			FROM

@@ -80,20 +80,20 @@
 			}
 		}
 
-		public function present()
+		public function report()
 		{
 			$data = array(
-				'get_regist_hdr' => $this->Mo_regis->present() ,
+				'get_regist_hdr' => $this->Mo_regis->report() ,
 				);
-			$this->load->view('present',$data);
+			$this->load->view('report',$data);
 		}
 
-		public function present_info($hdr_id="")
+		public function report_detail($hdr_id="")
 		{
 			$data =array(
 				'get_hdr_id' => $this->Mo_regis->present_id($hdr_id),
 				);
-			$this->load->view('present_info',$data);
+			$this->load->view('report_detail',$data);
 
 		}
 	}

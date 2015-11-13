@@ -29,7 +29,7 @@
 									<form class="check_status" name="check_status">
 										<input type="hidden" name="user_id" id="user_id" value="<?php echo $row_users->user_id;?>"/>
 										<input type="hidden" name="user" id="user" value="<?php echo $row_users->user_first_name;?>"/>
-										<input type="checkbox" id="my-checkbox" name="my-checkbox"  <?php echo $user_status;?> />
+										<input type="checkbox" id="my-checkbox" name="my-checkbox" <?php echo $status = ($row_users->user_status === 'admin'? "checked":"");?>/>
 									</form>
 								</td>
 							</tr>

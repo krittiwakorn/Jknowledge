@@ -8,9 +8,11 @@
 					<thead>
 						<th>ที่</th>
 						<th>ชื่อ - สกุล</th>
+						<th>เลขประจำตัวประชาชน</th>
+						<th>โรงเรียน</th>
+						<th>เบอร์โทร</th>
 						<th>คอร์สเรียน</th>
-						<th>เบอร์โทรติดต่อ</th>
-						<th>สะถานะ</th>
+						<th>สถานะการโอนเงิน</th>
 						<th>รายงานผู้สมัคร</th>
 					</thead>
 					<tbody>
@@ -19,15 +21,17 @@
 						foreach ($get_regist_hdr as $regist_hdr):?>
 						<?php $is_iti = ($regist_hdr->is_iti === '1'? "นาย":"นางสาว");?>
 						<tr>
-							<td><?php echo $number-- ;?></td>
+							<td><?php echo $number-- ;?></td>	<!--// ลำดับ -->
 							<td> <!-- name & lastname -->
 								<?php echo $is_iti;?>
 								<?php echo $regist_hdr->firstname;?>&nbsp;&nbsp;
 								<?php echo $regist_hdr->lastname;?>
 							</td>
-							<td><?php echo $regist_hdr->course_name;?></td>
-							<td><?php echo $regist_hdr->mobile;?></td>
-							<td>
+							<td><?php echo $regist_hdr->idcard;?></td> <!-- //เลขประจำตัวประชาชน -->
+							<td><?php echo $regist_hdr->school;?></td>  <!-- //โรงเรียน -->
+							<td><?php echo substr($regist_hdr->mobile,0,3)."-".substr($regist_hdr->mobile,3);?></td>	<!-- //เบอร์โทร -->
+							<td><?php echo $regist_hdr->course_name;?></td>	<!-- //ชื่อคอร์ส -->
+							<td>		<!-- //สถานะการโอนเงิน -->
 								<?php
 								switch ($regist_hdr->status_hdr) {
 									case '1':
@@ -49,7 +53,7 @@
 								?>
 							</td>
 							<td class="col-md-2">
-								<?php echo anchor('registration/present_info/'.$regist_hdr->id_register_hdr, 'รายละเอียด', 'class="btn btn-info"');?>
+								<?php echo anchor('registration/report_detail/'.$regist_hdr->id_register_hdr, 'รายละเอียด', 'class="btn btn-info"');?>
 								<?php echo anchor('registration/present_print', 'ปริ๊น', 'class="btn btn-primary"');?>
 							</td>
 						</tr>

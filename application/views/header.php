@@ -52,7 +52,7 @@
                                    <?php echo anchor('registration/manage_user', 'เพิ่มแอดมิน');?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/present', 'รายงาน');?>
+                                   <?php echo anchor('registration/report', 'รายงาน');?>
                               </li>
                          </ul>
                     </div>
