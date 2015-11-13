@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -58,57 +57,7 @@
                          </ul>
                     </div>
                     <!-- /.navbar-collapse -->
-=======
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<title>สมัครเรียนออนไลน์</title>
-<!-- Bootstrap Core CSS -->
-<link href="<?= base_url();?>css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap Datable -->
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/media/css/jquery.dataTables.css">
-<!-- Bootstrap Switch -->
-<link href="<?php echo base_url();?>css/bootstrap-switch/bootstrap-switch.css" rel="stylesheet">
-<!-- Custom CSS -->
-<style>
-     body{
-          padding-top: 70px;
-     }
-</style>
-</head>
-<body>
-     <!-- Navigation -->
-     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <div class="container">
-               <!-- Brand and toggle get grouped for better mobile display -->
-               <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                         <span class="sr-only">Toggle navigation</span>
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                         <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="registration">Start Bootstrap</a>
->>>>>>> cfe973eb82a706f1116bae70a270b92088f9a38b
-               </div>
-               <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                         <li>
-                              <!-- <a href="course">เพิ่มคอร์ส</a> -->
-                              <?php echo anchor('registration/course', 'เพิ่มคอร์ส'); ?>
-                         </li>
-                         <li>
-                              <?php echo anchor('registration/manage_user', 'เพิ่มแอดมิน');?>
-                         </li>
-                         <li>
-                              <?php echo anchor('registration/present', 'รายงาน');?>
-                         </li>
-                    </ul>
-               </div>
-               <!-- /.navbar-collapse -->
+
           </div>
           <!-- /.container -->
      </nav>
