@@ -5320,6 +5320,7 @@ a.list-group-item-danger.active:focus {
   border-bottom: 1px solid transparent;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
+  font-size: 30px;
 }
 .panel-heading > .dropdown .dropdown-toggle {
   color: inherit;
@@ -6580,5 +6581,16 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.fname{ 
+  position: relative;
+  min-height: 1px; 
+  width:50%
+}
+.lname{
+  position: relative;
+  min-height: 1px; 
+  width:50%
 }
 /*# sourceMappingURL=bootstrap.css.map */
