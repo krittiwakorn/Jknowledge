@@ -32,17 +32,19 @@
 			</div>
 			<div class="form-group col-sm-12 ">
 				<div class="col-md-3"></div>
-				<label for="status" class=" pull-left control-label">สถานะ:</label>
-				<div class="radio col-sm-3">
-					<label class="btn btn-success">
+				<div class="col-md-6">
+					<label for="status" class="control-label">สถานะ:</label>&nbsp;&nbsp;
+					<!-- <div class="radio col-sm-6"> -->
+					<label >
 						<input type="radio" name="status" id="status_1" value="1"  checked/>
 						พร้อมเปิด
 					</label>
-					<label class="btn btn-danger">
+					<label >
 						<input type="radio" name="status" id="status_0" value="2"/>
 						ไม่พร้อมเปิด
 					</label>
 					<?php echo form_error('status', '<span class="label label-warning">', '</span>');?>
+					<!-- </div> -->
 				</div>
 			</div>
 			<div class="form-group col-sm-12">
@@ -84,7 +86,7 @@
 					<td class="col-md-2 text-center"><?php echo $course_row->course_code;?></td>
 					<td><?php echo $course_row->course_name;?></td>
 					<td><?php echo $course_row->price."  บาท";?></td>
-					<td><?php echo $status = ($course_row->status === '2'? "<label class='btn btn-danger'>ไม่พร้อมเปิด</label>":"<label class='btn btn-success'>พร้อมเปิด</label>");?></td>
+					<td><?php echo $status = ($course_row->status === '2'? "<label class='btn btn-danger col-md-12'>ไม่พร้อมเปิด</label>":"<label class='btn btn-success'>พร้อมเปิด</label>");?></td>
 					<td><?php echo $course_row->comment;?></td>
 					<td class="col-md-2">
 						<?php echo anchor('#', 'แก้ไข','class="btn btn-warning" data-toggle="modal" data-target=".bs-example-modal-lg'.$course_row->id_course.'"');?>
@@ -134,18 +136,18 @@
 											</div>
 										</div>
 										<div class="form-group col-sm-12 ">
-											<div class="col-md-3"></div>
-											<label for="status" class=" pull-left control-label">สถานะ:</label>
-											<div class="radio col-sm-6">
-
+											<div class="col-md-3"></div>	
+											<div class=" col-sm-6">
+												<label for="status" class=" pull-left control-label">สถานะ:</label>
+												&nbsp;&nbsp;
 												<?php
 												if($course_row->status == '1'){
 													?>
-													<label class="btn btn-success">
+													<label >
 														<input type="radio" name="status" id="status_1" value="1"  checked />
 														พร้อมเปิด
 													</label>
-													<label class="btn btn-danger">
+													<label >
 														<input type="radio" name="status" id="status_0" value="2"   />
 														ไม่พร้อมเปิด
 													</label>
