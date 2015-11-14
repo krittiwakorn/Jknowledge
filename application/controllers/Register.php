@@ -18,6 +18,36 @@ class Register extends CI_Controller {
 		$this->load->view('register');
 	}
 
+	public function home()
+	{
+		$this->load->view('home');
+	}
+
+	public function register_search()
+	{
+		$this->load->view('register_search');
+	}
+
+	public function register_list()
+	{
+		$this->load->view('register_list');
+	}
+
+	public function register_confirm()
+	{
+		$this->load->view('register_confirm');
+	}
+
+	public function register_detail()
+	{
+		$this->load->view('register_detail');
+	}
+
+	public function register_print()
+	{
+		$this->load->view('register_print');
+	}
+
 		 
 	public function insert_course()
 	{

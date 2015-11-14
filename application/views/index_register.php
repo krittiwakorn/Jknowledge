@@ -1,5 +1,10 @@
 <?php $this->load->view('header_register');?>
 <div class="row">
+<div class="panel panel-primary">
+	<div class="panel-heading" style="font-size:25px;">สมัครเรียนออนไลน์</div>
+	<div class="panel-body">
+	<!-- insert register  -->
+	<br/><br/><br/>
 <?php echo form_open(base_url().'Register/add','class="form-horizontal " role="form"');?>
 <div class="row">
 	<div class="col-sm-3"></div>
@@ -23,6 +28,10 @@
 	</div>
 	<div class="col-sm-3"></div>
 </div>
+<br/><br/><br/>
 <?php echo form_close();?> 
+	</div> <!-- panel-heading -->
+	</div> <!-- panel-body -->
+</div> <!-- panel panel-primary -->
 </div>
 <?php $this->load->view('footer');?>
