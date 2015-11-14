@@ -62,7 +62,6 @@
 								<div class="modal-content col-md-12">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title">แสดงข้อมูล</h4>
 									</div>
 									<div class="panel panel-primary">
 										<div class="panel-heading">รายละเอียดผู้สมัคร	</div>
@@ -101,7 +100,7 @@
 												<div class="form-group col-sm-12 ">
 													<div class="col-md-3"></div>
 													<div class="col-sm-6">
-														<label for="course_name" class=" control-label">สถานะการโอนเงิน:</label><br/>
+														<label for="course_name" class=" control-label">ใบเสร็จชำระเงิน:</label><br/>
 														<div class=" col-xs-9 col-md-6">
 															<a href="#" class="thumbnail ">
 																<img src="<?php echo base_url().'image/nopicture.jpg';?>" alt="ultraman" >
