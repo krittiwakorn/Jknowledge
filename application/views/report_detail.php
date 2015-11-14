@@ -29,7 +29,7 @@
 		<div class="row col-md-12">
 			<div class="col-xs-6 col-md-3 col-md-offset-5">
 				<a href="#" class="thumbnail">
-					<img src="<?php echo base_url().'image/hg.jpg';?>" alt="ultraman">
+					<img src="<?php echo base_url().'image/nopicture.jpg';?>" alt="ultraman">
 				</a>
 			</div>
 			<div class="col-md-12 text-center">

@@ -35,13 +35,13 @@
 								<?php
 								switch ($regist_hdr->status_hdr) {
 									case '1':
-									echo '<h4><span class="label label-default">Create</span></h4>';
+									echo '<h4><span class="label label-danger col-md-11">ยังไม่ชำระเงิน</span></h4>';
 									break;
 									case '2':
-									echo '<h4><span class="label label-primary">ยืนยันการสมัคร</span></h4>';
+									echo '<h4><span class="label label-primary col-md-11">จ่ายเงินแล้ว</span></h4>';
 									break;
 									case '3':
-									echo '<h4><span class="label label-success">ตรวจสอบการสมัครแล้ว</span></h4>';
+									echo '<h4><span class="label label-success col-md-11">ตรวจสอบการสมัครแล้ว</span></h4>';
 									break;
 									case '4':
 									echo '<h4><span class="label label-warning">หมดอายุการสมัคร</span></h4>';
@@ -53,8 +53,9 @@
 								?>
 							</td>
 							<td class="col-md-2">
-								<?php echo anchor('registration/report_detail/'.$regist_hdr->id_register_hdr, 'รายละเอียด', 'class="btn btn-info"');?>
-								<?php echo anchor('registration/present_print', 'ปริ๊น', 'class="btn btn-primary"');?>
+								<?php //echo anchor('registration/report_detail/'.$regist_hdr->id_register_hdr, 'รายละเอียด', 'class="btn btn-info"');?>
+								<?php //echo anchor('registration/present_print', 'ปริ๊น', 'class="btn btn-primary"');?>
+								<?php echo anchor('#', 'ดูรายละเอียด', 'class="btn btn-info"');?>
 							</td>
 						</tr>
 					<?php endforeach;  ?>

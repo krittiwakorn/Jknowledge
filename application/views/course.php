@@ -180,8 +180,8 @@
 										<div class="form-group col-sm-12">
 											<div class="col-md-3"></div>
 											<div class="col-sm-6">
-												<button type="submit" class="btn btn-success ">SAVE</button>
-												<button type="reset" class="btn btn-warning ">RESET</button>
+												<button type="submit" class="btn btn-success ">UPDATE</button>
+												<button type="cancel" class="btn btn-warning ">CANCEL</button>
 											</div>
 										</div>
 
