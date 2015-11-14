@@ -95,8 +95,8 @@ class Registration extends CI_Controller
 	public function pdf()
 	{
 		$this->pdf->AddPage();
-		$pdf->AddFont('THSarabun','','THSarabun.php');
-		$pdf->SetFont('THSarabun','',30);
+		$this->pdf->AddFont('THSarabun','','THSarabun.php');
+		$this->pdf->SetFont('THSarabun','',30);
 		$this->pdf->Cell(40,10,iconv('UTF-8','TIS-620','สวัสดี!'),0,1,"C");
 		$this->pdf->Output();
 	}
