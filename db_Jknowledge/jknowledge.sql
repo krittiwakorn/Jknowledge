@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 13, 2015 at 04:52 PM
+-- Generation Time: Nov 14, 2015 at 01:38 AM
 -- Server version: 10.0.17-MariaDB
 -- PHP Version: 5.6.14
 
@@ -244,7 +244,9 @@ CREATE TABLE `register_hdr` (
 --
 
 INSERT INTO `register_hdr` (`id_register_hdr`, `register_code`, `register_date`, `confirm_date`, `approve_date`, `idcard`, `is_iti`, `firstname`, `lastname`, `birth_date`, `id_course`, `mobile`, `email`, `facebook`, `line_id`, `amount`, `price`, `school`, `id_province`, `is_class`, `ref_regis_file`, `ref_regis_con`, `status`, `comment`, `id_create`, `dt_create`, `id_update`, `dt_update`) VALUES
-(1, '001', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '1111000223400', 1, 'เต้', 'ไชยวัฒน์', '2015-11-13', 1, '1220345670', 'te@hotmail.com', 'te@facebook.com', 'te@line.me', 1, '5000.00', 'โรงเรียนวัด', 10, 6, NULL, NULL, 1, 'ไม่พัก', NULL, NULL, NULL, NULL);
+(1, '001', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '1111000223400', 1, 'เต้', 'ไชยวัฒน์', '2015-11-13', 1, '1220345670', 'te@hotmail.com', 'te@facebook.com', 'te@line.me', 1, '5000.00', 'โรงเรียนวัด', 10, 6, NULL, NULL, 1, 'ไม่พัก', NULL, NULL, NULL, NULL),
+(2, '002', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '', 2, 'เต้', 'เต้', '0000-00-00', 1, '', NULL, NULL, NULL, 0, '0.00', NULL, 10, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL),
+(3, '003', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '', 1, 'ทดสอบ', 'ทดสอบ', '2015-11-13', 1, '', NULL, NULL, NULL, 0, '0.00', NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -258,7 +260,7 @@ CREATE TABLE `users` (
   `user_last_name` varchar(100) NOT NULL,
   `user_email` varchar(100) NOT NULL,
   `user_gender` enum('male','female') NOT NULL,
-  `user_status` enum('supper_admin','admin','committee','student_udru','student_paper','student_public','teacher_public','people_public') NOT NULL,
+  `user_status` enum('user','admin') NOT NULL,
   `user_password` char(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -268,10 +270,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`user_id`, `user_first_name`, `user_last_name`, `user_email`, `user_gender`, `user_status`, `user_password`) VALUES
 (1, 'te', 'te', 'te@hotmail.com', 'male', 'admin', '1234'),
-(2, 'ch', 'ch', 'ch@hotmail.com', 'male', 'people_public', '1234'),
-(3, 'chaiwat', 'chaiwat', 'chaiwat@exam.com', 'male', 'supper_admin', '1234'),
-(4, 'tete_subper', 'tete_subper', 'tete@example.com', 'male', 'people_public', '1234'),
-(5, 'homsang', 'homsang', 'homsang@example.com', 'male', 'people_public', '1234');
+(2, 'ch', 'ch', 'ch@hotmail.com', 'male', 'admin', '1234'),
+(3, 'chaiwat', 'chaiwat', 'chaiwat@exam.com', 'male', '', '1234'),
+(4, 'tete_subper', 'tete_subper', 'tete@example.com', 'male', '', '1234'),
+(5, 'homsang', 'homsang', 'homsang@example.com', 'male', '', '1234');
 
 --
 -- Indexes for dumped tables
@@ -331,7 +333,7 @@ ALTER TABLE `course`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'running number', AUTO_INCREMENT=21;
+  MODIFY `id_member` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'running number';
 --
 -- AUTO_INCREMENT for table `province`
 --
@@ -346,7 +348,7 @@ ALTER TABLE `register_dtl`
 -- AUTO_INCREMENT for table `register_hdr`
 --
 ALTER TABLE `register_hdr`
-  MODIFY `id_register_hdr` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID Runnumber', AUTO_INCREMENT=2;
+  MODIFY `id_register_hdr` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID Runnumber', AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
