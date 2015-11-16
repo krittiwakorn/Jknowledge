@@ -5,7 +5,7 @@
 		<div class="panel-heading">	เพิ่มคอร์สเรียน	</div>
 		<div class="panel-body">
 			<!-- insert course  -->
-			<?php echo form_open('Registration/insert_course', ' role="form" class="" ');?>
+			<?php echo form_open('Registration/insertCourse', ' role="form" class="" ');?>
 			<div class="form-group col-sm-12 ">
 				<div class="col-md-3"></div>
 				<div class="col-sm-6">
@@ -136,7 +136,7 @@
 											</div>
 										</div>
 										<div class="form-group col-sm-12 ">
-											<div class="col-md-3"></div>	
+											<div class="col-md-3"></div>
 											<div class=" col-sm-6">
 												<label for="status" class=" pull-left control-label">สถานะ:</label>
 												&nbsp;&nbsp;

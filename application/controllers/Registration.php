@@ -12,12 +12,15 @@ class Registration extends CI_Controller
 		date_default_timezone_set('Asia/Bangkok');
 		$this->load->model('Mo_regis', '', true);
 		$this->load->library('Pdf'); // Load library
+		$this->load->library('tcpdf');
 		$this->pdf->fontpath = 'font/'; // Specify font folder
 	}
+
 	public function index()
 	{
 		$this->load->view('index');
 	}
+
 	public function course()
 	{
 		$data = array(
@@ -25,6 +28,7 @@ class Registration extends CI_Controller
 			);
 		$this->load->view('course', $data);
 	}
+
 	public function insertCourse()
 	{
 		$this->form_validation->set_rules('course_code', 'รหัสคอร์สเรียน', 'trim|required|xss_clean|numeric|max_length[11]');
@@ -41,6 +45,7 @@ class Registration extends CI_Controller
 			$this->Mo_regis->insertCourse();
 		}
 	}
+
 	public function updateCourse()
 	{
 		if ($this->input->post('course_update') == 'course_update') {
@@ -49,6 +54,7 @@ class Registration extends CI_Controller
 			$this->course();
 		}
 	}
+
 	public function delCourse($value = '') //del course
 	{
 		if ($value != null) {
@@ -57,11 +63,13 @@ class Registration extends CI_Controller
 			$this->course();
 		}
 	}
+
 	public function manageUser()
 	{
 		$data = array('get_users' => $this->db->get('users')->result());
 		$this->load->view('manage_user', $data);
 	}
+
 	public function manageStatus()
 	{
 		$my_status = $this->input->post('my-checkbox');
@@ -74,33 +82,39 @@ class Registration extends CI_Controller
 			echo $update_status;
 		}
 	}
-	public function report()
+
+	public function report($report_hdr_id = " ")
 	{
-		$data = array(
-			'get_regist_hdr' => $this->Mo_regis->report(),
-			);
-		$this->load->view('report', $data);
+		if($report_hdr_id ==" "){
+			$data = array(
+				'get_course' => $this->Mo_regis->get_course(),
+				'get_regist_hdr' => $this->Mo_regis->report(),
+				);
+			$this->load->view('report', $data);
+		}else{
+			$data = array(		//แสดงผู้สมัครตามคอร์อส
+				'get_course' => $this->Mo_regis->get_course(),
+				'get_regist_hdr' => $this->Mo_regis->reportWhereCourse($report_hdr_id),
+				);
+			$this->load->view('report', $data);
+		}
+
 	}
 	public function reportDetail($hdr_id = "")
 	{
 		$data = array(
-			'get_hdr_id' => $this->Mo_regis->present_id($hdr_id),
+			'get_hdr_id' => $this->Mo_regis->report_id($hdr_id),
 			);
 		$this->load->view('report_detail', $data);
 	}
+
 	public function memberInfo()
 	{
 		$this->load->view('member_info');
 	}
+
 	public function pdf()
 	{
-		$html = <<<EOD
-    <h1>Welcome to <a href="http://www.tcpdf.org" style="text-decoration:none;background-color:#CC0000;color:black;">&nbsp;<span style="color:black;">TC</span><span style="color:white;">PDF</span>&nbsp;</a>!</h1>
-    <i>This is the first example of TCPDF library.</i>
-    <p>This text is printed using the <i>writeHTMLCell()</i> method but you can also use: <i>Multicell(), writeHTML(), Write(), Cell() and Text()</i>.</p>
-    <p>Please check the source code documentation and other examples for further information.</p>
-    <p style="color:#CC0000;">TO IMPROVE AND EXPAND TCPDF I NEED YOUR SUPPORT, PLEASE <a href="http://sourceforge.net/donate/index.php?group_id=128076">MAKE A DONATION!</a></p>
-EOD;
 
 		$this->pdf->AddPage();
 		$this->pdf->AddFont('THSarabun','','THSarabun.php');
@@ -112,7 +126,27 @@ EOD;
 
 	}
 
+	public function Login()
+	{
+		$this->load->view('login');
+	}
 
+	public function tcpdf()
+	{
+		// $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+		// $pdf->SetTitle('My Title');
+		// $pdf->SetHeaderMargin(30);
+		// $pdf->SetTopMargin(20);
+		// $pdf->setFooterMargin(20);
+		// $pdf->SetAutoPageBreak(true);
+		// $pdf->SetAuthor('Author');
+		// $pdf->SetDisplayMode('real', 'default');
+
+		// $pdf->Write(5, 'Some sample text');
+		// $pdf->Output();
+
+		$this->load->view('tcpdf');
+	}
 
 }
 /* End of file welcome.php */

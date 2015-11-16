@@ -9,7 +9,7 @@ class Mo_regis extends CI_Model {
 		date_default_timezone_set('Asia/Bangkok');
 	}
 
-	function insert_course(){  // เพิ่มคอร์สเรียน
+	function insertCourse(){  // เพิ่มคอร์สเรียน
 		$course_code = $this->input->post('course_code');
 		$course_name = $this->input->post('course_name');
 		$course_price = $this->input->post('course_price');
@@ -90,7 +90,7 @@ class Mo_regis extends CI_Model {
 		return $Present;
 	}
 
-	public function present_id($value='')
+	public function report_id($value='')
 	{
 		$Present = $this->db->query('SELECT * , `register_hdr`.`status`as "status_hdr"
 			FROM
@@ -99,6 +99,17 @@ class Mo_regis extends CI_Model {
 			WHERE id_register_hdr ="'.$value.'"
 			')->result();
 		return $Present;
+	}
+
+	public function reportWhereCourse($value='')
+	{
+		$reprtByCourse = $this->db->query('SELECT  * , `register_hdr`.`status`as "status_hdr"
+			FROM
+			`course`
+			INNER JOIN `register_hdr` ON `register_hdr`.`id_course` = `course`.`id_course`
+			WHERE course.id_course ="'.$value.'"
+			')->result();
+		return $reprtByCourse;
 	}
 
 

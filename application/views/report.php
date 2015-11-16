@@ -1,9 +1,16 @@
 <?php $this->load->view('header');?>
+
 <div class="container">
 	<section >
 		<div class="panel panel-primary">
-			<div class="panel-heading"> รายงานผู้สมัคร	</div>
+			<div class="panel-heading"> รายงานผู้สมัครตามคอร์สเรียน</div>
 			<div class="panel-body">
+				<ul class="nav nav-pills btn ">
+					<?php foreach ($get_course as $course_row):?>
+						<li role="presentation" class="active"><?php echo anchor('registration/report/'.$course_row->id_course, $course_row->course_name, 'attributes');?></li>
+					<?php endforeach;?>
+				</ul>
+				<hr/>
 				<table id="" class="display" cellspacing="0" width="100%">
 					<thead>
 						<th>ชื่อ-นามสกุล</th>
@@ -16,7 +23,6 @@
 					</thead>
 					<tbody>
 						<?php
-						$number =  count($get_regist_hdr);
 						foreach ($get_regist_hdr as $regist_hdr):?>
 						<?php $is_iti = ($regist_hdr->is_iti === '1'? "นาย":"นางสาว");?>
 						<tr>
