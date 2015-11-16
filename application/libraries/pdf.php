@@ -9,5 +9,7 @@ class My_pdf extends FPDF
     // Call parent constructor
 		parent::__construct($orientation,$unit,$size);
 	}
+
+
 }
 ?>

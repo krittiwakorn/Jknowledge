@@ -6,7 +6,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="">
      <meta name="author" content="">
-     <title>Bare - Start Bootstrap Template</title>
+     <title>ระบบลงทะเบียนออนไลน์ออก </title>
      <!-- Bootstrap Core CSS -->
      <link href="<?= base_url();?>css/bootstrap.min.css" rel="stylesheet">
      <!-- Bootstrap Datable -->
@@ -49,7 +49,7 @@
                                    <?php echo anchor('registration/course', 'เพิ่มคอร์ส'); ?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/manage_user', 'เพิ่มแอดมิน');?>
+                                   <?php echo anchor('registration/manageUser', 'เพิ่มแอดมิน');?>
                               </li>
                               <li>
                                    <?php echo anchor('registration/report', 'รายงาน');?>
