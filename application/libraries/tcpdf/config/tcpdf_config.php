@@ -1,4 +1,5 @@
 <?php
+header('Content-type: text/plain; charset=utf-8');
 //============================================================+
 // File name   : tcpdf_config.php
 // Begin       : 2004-06-11
@@ -81,6 +82,7 @@
  */
 //define ('K_PATH_CACHE', '/tmp/');
 
+
 /**
  * Generic name for a blank image.
  */
@@ -104,17 +106,17 @@ define ('PDF_CREATOR', 'TCPDF');
 /**
  * Document author.
  */
-define ('PDF_AUTHOR', 'TCPDF');
+define ('PDF_AUTHOR', 'ระบบลงทะเบียนออนไลน์');
 
 /**
  * Header title.
  */
-define ('PDF_HEADER_TITLE', 'TCPDF Example');
+define ('PDF_HEADER_TITLE', 'ระบบลงทะเบียนออนไลน์');
 
 /**
  * Header description string.
  */
-define ('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
+define ('PDF_HEADER_STRING', iconv('UTF-8','TIS-620','สำหรับนักเรียน(ใช้เป็นหลักฐานการสมัครเรียน) โปรดเรียกเก็บค่าธรรมเนียมจากผู้ชำระเงิน'));
 
 /**
  * Document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch].
