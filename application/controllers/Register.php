@@ -34,12 +34,15 @@ class Register extends CI_Controller {
 		$this->load->view('register_check');
 	}
 
-	
-
 	public function register_search()
 	{
 		$this->load->view('register_search');
 	}
+
+	public function register_check_status()
+	{
+		$this->load->view('register_check_status');
+	} 
 
 	public function register_list()
 	{
@@ -49,6 +52,11 @@ class Register extends CI_Controller {
 	public function register_confirm()
 	{
 		$this->load->view('register_confirm');
+	}
+
+	public function register_confirm_success()
+	{
+		$this->load->view('register_confirm_success');
 	}
 
 	public function register_detail()

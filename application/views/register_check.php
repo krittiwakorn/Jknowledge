@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="col-sm-12" style="text-align:center;">
 				<div class="col-sm-2" style="border-bottom: 8px solid #449d44;"> 
-					<i class="glyphicon glyphicon-ok text-success"></i> เงื่อนไขการสมัคร
+					<i class="glyphicon glyphicon-ok text-success"></i> อ่านก่อน
 				</div>
 				<div class="col-sm-2" style="border-bottom: 8px solid #449d44;"> 
 					<i class="glyphicon glyphicon-ok text-success"></i> เลือกคอร์สเรียน
@@ -18,13 +18,13 @@
 					<i class="glyphicon glyphicon-ok text-success"></i>  ข้อมูลผู้สมัคร
 				</div>
 				<div class="col-sm-2" style="border-bottom: 8px solid #449d44;">
-					<i class="glyphicon glyphicon-ok text-success"></i>  ข้อมูลผู้สมัครร่วม
+					<i class="glyphicon glyphicon-ok text-success"></i>  เพิ่มเพื่อน
 				</div>
 				<div class="col-sm-2" style="border-bottom: 8px solid #449d44;"> 
 					<i class="glyphicon glyphicon-ok text-success"></i>  ตรวจสอบและยืนยัน
 				</div>
 				<div class="col-sm-2" style="border-bottom: 8px solid #eee;"> 
-					<i class="glyphicon glyphicon-plus-sign text-primary"></i>  เสร็จสิ้น (รอการชำระเงิน)
+					<i class="glyphicon glyphicon-plus-sign text-primary"></i>  เสร็จสิ้น
 				</div> 
 			</div>
 		</div>
@@ -94,24 +94,10 @@
 		</div>
 		<br/><br/>  
 		<div class="row" style="text-align:right;font-size:18px;">
-			<div class="col-sm-12"> ผู้สมัครร่วม 1</div>
+			<div class="col-sm-12"> เพื่อน คนที่ 1</div>
 		</div> 
 		<hr/>
 		<div class="row">
-			<div class="col-sm-4">  
-                <label >รหัสประจำประชาชน *</label>
-                <p style="border-bottom: 2px solid #eee;"> 1254854587548</p>
-			</div>
-			<div class="col-sm-4"> 
-	            <label >เบอร์ติดต่อ *</label>
-                <p style="border-bottom: 2px solid #eee;"> 0854511634</p>
-            </div>
-            <div class="col-sm-4"> 
-                <label >อีเมล์ *</label>
-            	<p style="border-bottom: 2px solid #eee;"> te.chawat@gmail.com</p>
-            </div>
-        </div>
-		<div class="row" style="padding-top:10px;">
 			<div class="col-sm-4"> 
                 <label >ชื่อ * </label>
                 <p style="border-bottom: 2px solid #eee;"> นายไชยวัฒน์</p>
@@ -120,39 +106,31 @@
                 <label >นามสกุล *</label>
                 <p style="border-bottom: 2px solid #eee;"> หอมแสง</p>
 			</div> 
+			<div class="col-sm-4">  
+                <label >รหัสประจำประชาชน *</label>
+                <p style="border-bottom: 2px solid #eee;"> 1254854587548</p>
+			</div>
+		</div>
+		<div class="row" style="padding-top:10px;">
 			<div class="col-sm-4">
                 <label >ชื่อเล่น *</label>
                 <p style="border-bottom: 2px solid #eee;"> เต้</p>
 			</div> 
-		</div>
-		<div class="row" style="padding-top:10px;">
-			<div class="col-sm-4">
-                <label >วันเกิด *</label>
-                <p style="border-bottom: 2px solid #eee;"> 13/04/2531</p>
-			</div> 
-			<div class="col-sm-4">
-                <label >facebook</label>
-            	<p style="border-bottom: 2px solid #eee;"> https://www.facebook.com/te</p>
-            </div>  
-			<div class="col-sm-4">
-                <label >Line ID</label>
-            	<p style="border-bottom: 2px solid #eee;"> te_chaiwat</p>
+			<div class="col-sm-4"> 
+	            <label >เบอร์โทรศัพท์ *</label>
+                <p style="border-bottom: 2px solid #eee;"> 0854511634</p>
             </div> 
-        </div>
-		<div class="row" style="padding-top:10px;">
-			<div class="col-sm-4">
+            <div class="col-sm-4">
                 <label >โรงเรียน</label>
             	<p style="border-bottom: 2px solid #eee;"> ศรีบุญเรือง</p>
 	        </div>
+	    </div>
+		<div class="row" style="padding-top:10px;">
 	        <div class="col-sm-4">
                 <label >ระดับชั้น </label>
                 <p style="border-bottom: 2px solid #eee;"> มัธยมศึกษาปีที่ 6</p>
-			</div>
-			<div class="col-sm-4">
-                <label >จังหวัด</label>
-            	<p style="border-bottom: 2px solid #eee;"> ขอนแก่น</p>
-			</div> 
-		</div>
+			</div>  
+		</div> 
 		<hr/>
 		<div class="row" >
 			<div class="col-sm-8" style="text-align:right;">จำนวนผู้สมัคร รวม :</div>
@@ -166,14 +144,14 @@
 		<div class="row" >
 			<div class="col-sm-8" style="text-align:right;">จำนวนค่าสมัคร ต่อคน :</div>
 	        <div class="col-sm-2"> 
-                <p style="border-bottom: 2px solid #eee;text-align:right;"> 7,000.00 </p>
+                <p style="border-bottom: 2px solid #eee;text-align:right;"> 900.00 </p>
 			</div>
 			<div class="col-sm-2"> 
             	<p> บาท</p>
 			</div> 
 		</div>
 		<div class="row" >
-			<div class="col-sm-8" style="text-align:right;">โปรโมชั่นส์ ส่วนลด :</div>
+			<div class="col-sm-8" style="text-align:right;">โปรโมชั่นส์/ส่วนลด ต่อคน :</div>
 	        <div class="col-sm-2"> 
                 <p style="border-bottom: 2px solid #eee;text-align:right;"> 0.00 </p>
 			</div>
@@ -184,7 +162,7 @@
 		<div class="row" >
 			<div class="col-sm-8" style="text-align:right;">ยอดเงินที่ต้องชำระ :</div>
 	        <div class="col-sm-2"> 
-                <p style="border-bottom: 2px solid #eee;text-align:right;"> 14,000.00 </p>
+                <p style="border-bottom: 2px solid #eee;text-align:right;"> 1,800.00 </p>
 			</div>
 			<div class="col-sm-2"> 
             	<p> บาท</p>

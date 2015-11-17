@@ -27,24 +27,25 @@
             	</div>
             	<div class="form-group">
 	                <label >ยอดเงินที่ต้องชำระ</label>
-	                <input type="text" id="birth_date" name="birth_date" class="form-control" style="font-size: 20px; height:40px;" value="7,000.00" disabled>
+	                <input type="text" id="birth_date" name="birth_date" class="form-control" style="font-size: 20px; height:40px;" value="1,900.00" disabled>
             	</div>
             	<div class="form-group">
 	                <label >ยอดเงินที่ชำระ</label>
-	                <input type="text" id="birth_date" name="birth_date" class="form-control" style="font-size: 20px; height:40px;" value=""  placeholder='-- กรุณาระบุยอดเงินที่ชำระ --' required="required">
+	                <input type="text" id="birth_date" name="birth_date" class="form-control" style="font-size: 20px; height:40px;" value="1,900.00" placeholder='-- กรุณาระบุยอดเงินที่ชำระ --' required="required">
             	</div>
             	<div class="form-group">
 	                <label >แนบใบเสร็จที่ชาระเงินแล้ว</label>
 	                <div class='input-group date' id='datetimepicker3'>
-	                    <input type='text' class="form-control" style="font-size: 20px; height:40px;" placeholder='-- เลือก --' required="required">
+	                    <input type='text' class="form-control" style="font-size: 20px; height:40px;" placeholder='-- เลือก --' value="ใบเสร็จ.jpg" required="required">
 	                    <span class="input-group-addon">
 	                        <span class="glyphicon glyphicon-paperclip"></span>
 	                    </span>
-	                </div> 
+	                </div><br>
+	                <h3 style="color:#ff0000;">ระบบรับแจ้งแล้ว ขอบคุณค่ะ</h3>
             	</div>
 			</div>
 			<div class="col-sm-3"></div> 
-		</div>  <br><br>
+		</div>  
 		<div class="row">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">

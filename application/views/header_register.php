@@ -12,9 +12,7 @@
 <!-- Bootstrap Datable -->
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/media/css/jquery.dataTables.css">
 <!-- Bootstrap Switch -->
-<link href="<?php echo base_url();?>css/bootstrap-switch/bootstrap-switch.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" media="screen" href="css/main_load_stepprocess.css" />
-<link href='css/progresstrack.css' rel='stylesheet' type='text/css'>
+<link href="<?php echo base_url();?>css/bootstrap-switch/bootstrap-switch.css" rel="stylesheet"> 
 <!-- Custom CSS -->
 <style>
      body{
