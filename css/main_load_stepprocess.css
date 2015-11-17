@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+
+/******* CONTAINER *******/
+#container{
+	width: auto;
+	margin: 0pt auto;
+	color: #fff;
+}
+/******* /CONTAINER *******/
+/******* TOP *******/
+#top{
+	margin: 0 auto;
+	padding: 10px 0 0 0;
+}
+#top h1 a{
+	background: transparent url(images/logo.jpg) no-repeat scroll left top;
+	display: block;
+	float: left;
+	height: 46px;
+	text-indent: -999999px;
+	width: 205px;
+}
+/******* /TOP *******/
+/******* MENU *******/
+#top #menu{
+	float: left;
+	list-style-type: none;
+	margin: 12px 0 0 26px;
+}
+#top #menu li{
+	float: left;
+	margin-right: 16px;
+	text-transform: uppercase;
+	color: #c2c2c2;
+}
+#top #menu li:hover{
+	color: #6fa5fd;
+	cursor: pointer;
+}
+/******* /MENU *******/
+/******* LOADING *******/
+#loading{
+	text-align: center;
+	visibility: hidden;
+}
+/******* /LOADING *******/
+/******* CONTENT *******/
+#content{
+	color: #7e7e7e;
+	margin: 0 0 20px 0;
+	line-height: 1.3em;
+	font-size: 11px;
+}
+#content p{
+	margin-bottom: 0.7em;
+}
+#content a{
+	font-weight: 700;
+	color: #6fa5fd;
+	border-bottom: 1px dotted #6fa5fd;
+}
+/******* /CONTENT *******/

@@ -1,7 +1,7 @@
 <?php $this->load->view('header_register');?>
 <div class="row">
 	<div class="panel panel-primary">
-		<div class="panel-heading" style="font-size:25px;">ระบบสมัครเรียนออนไลน์ - แจ้งการชำระเงิน</div>
+		<div class="panel-heading" style="font-size:25px;">แจ้งการชำระเงิน</div>
 		<div class="panel-body">
 		<!-- insert register  --> 
 		<br> 

@@ -10,18 +10,31 @@ class Register extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('index_register');
-	}
-
-	public function add()
-	{
-		$this->load->view('register');
-	}
-
-	public function home()
-	{
 		$this->load->view('home');
 	}
+
+	public function register_entry()
+	{
+		$this->load->view('register_entry');
+	} 
+	public function register_course()
+	{
+		$this->load->view('register_course');
+	} 
+	public function register_add()
+	{
+		$this->load->view('register_add');
+	} 
+	public function register_friend()
+	{
+		$this->load->view('register_friend');
+	}
+	public function register_check()
+	{
+		$this->load->view('register_check');
+	}
+
+	
 
 	public function register_search()
 	{
@@ -43,11 +56,15 @@ class Register extends CI_Controller {
 		$this->load->view('register_detail');
 	}
 
+	public function register_download()
+	{
+		$this->load->view('register_download');
+	}
+
 	public function register_print()
 	{
 		$this->load->view('register_print');
 	}
-
 		 
 	public function insert_course()
 	{
