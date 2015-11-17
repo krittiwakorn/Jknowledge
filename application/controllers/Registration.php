@@ -11,9 +11,7 @@ class Registration extends CI_Controller
 		parent::__construct();
 		date_default_timezone_set('Asia/Bangkok');
 		$this->load->model('Mo_regis', '', true);
-		// $this->load->library('Pdf'); // Load library
 		$this->load->library('tcpdf');
-		$this->pdf->fontpath = 'font'; // Specify font folder
 	}
 
 	public function index()
@@ -113,18 +111,18 @@ class Registration extends CI_Controller
 		$this->load->view('member_info');
 	}
 
-	public function pdf()
-	{
+	// public function pdf()
+	// {
 
-		$this->pdf->AddPage();
-		$this->pdf->AddFont('THSarabun','','THSarabun.php');
-		$this->pdf->SetFont('THSarabun','',30);
-		$this->pdf->Cell(40,10,iconv('UTF-8','TIS-620','hellow<br/>'),0,1,"C");
-		$this->pdf->Write(5,$html);
-		$this->pdf->Output('test.pdf',"I");
+	// 	$this->pdf->AddPage();
+	// 	$this->pdf->AddFont('THSarabun','','THSarabun.php');
+	// 	$this->pdf->SetFont('THSarabun','',30);
+	// 	$this->pdf->Cell(40,10,iconv('UTF-8','TIS-620','hellow<br/>'),0,1,"C");
+	// 	$this->pdf->Write(5,$html);
+	// 	$this->pdf->Output('test.pdf',"I");
 
 
-	}
+	// }
 
 	public function Login()
 	{

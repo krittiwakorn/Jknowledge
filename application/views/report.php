@@ -5,9 +5,11 @@
 		<div class="panel panel-primary">
 			<div class="panel-heading"> รายงานผู้สมัครตามคอร์สเรียน</div>
 			<div class="panel-body">
-				<ul class="nav nav-pills btn ">
+				<span class="title">ดูจากคอร์สเรียน</span><br/>
+				<ul class="nav nav-pills  ">
 					<?php foreach ($get_course as $course_row):?>
-						<li role="presentation" class="active"><?php echo anchor('registration/report/'.$course_row->id_course, $course_row->course_name, 'attributes');?></li>
+						<li role="presentation" class="active"><?php echo anchor('registration/report/'.$course_row->id_course, $course_row->course_name, 'attributes');?>
+						</li>
 					<?php endforeach;?>
 				</ul>
 				<hr/>
