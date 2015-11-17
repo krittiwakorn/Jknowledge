@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 // create new PDF document
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -63,16 +63,16 @@ $first_name = "<input type='text' name='fname' />";
 $html = '
 <table width="100%" cellspacing="5" >
 	<tr>
-		<td align="left" colspan="2" valign="top"><h2> ใบสมัครเรียน </h2></td> 
+		<td align="left" colspan="2" valign="top"><h2> ใบสมัครเรียน </h2></td>
 		<td align="right" colspan="2">
-			<img src="'.$img_url.'/logo.jpg " alt=""  width="40px;" height="40px;"><br/>
+			<img src="'.$img_url.'/logo.jpg " alt=""  width="60px;" height="60px;"><br/>
 			<b e:16ppt;"style="font-siz>สถาบันกวดวิชา jknowledge</b><br/>
 			<b>123/1203 อาคารยู-พลาซ่า ชั้น 2 หมู่ที่ 16 ถ.มิตรภาพ ต.ในเมือง อ.เมืองขอนแก่น จ.ขอนแก่น</b>
 		</td>
-	</tr> 
+	</tr>
 	<tr >
 		<td width="90" align="right">
-			<img src="'.$img_url.'/scb.png " alt="" height="50" width="50"> 
+			<img src="'.$img_url.'/scb.png " alt="" height="50" width="50">
 		</td>
 		<td colspan="3" class="left" >
 			ธนาคารไทยพาณิชย์ ประเภทออมทรัพย์<br/>
@@ -80,61 +80,61 @@ $html = '
 			ชื่อบัญชี <b>นายสันฐิติ  บุญศรี</b>
 		</td>
 	</tr>
-	<tr> 
+	<tr>
 		<td colspan="2" width="100%" align="center">
 			<br/><br/> สาขา/BRANCH...............................................................................วันที่/DATE...................................................................
 		</td>
 	</tr>
 	<tr height="30" >
 		<td colspan="3"  align="right" width="40%">ชื่อโครงกำรที่สมัคร :</td>
-		<td class="left" width="40%" style="border: 1px solid #eee;" align="left"> R258110001</td>
+		<td class="left" width="40%" style="border: 1px solid #000;" align="left"> R258110001</td>
 	</tr>
 
-	<tr height="50"> 
+	<tr height="50">
 		<td colspan="3" align="right" width="40%">ชื่อ-นามสกุล :</td>
-		<td class="left" style="border: 1px solid #eee;"> นายดิษฐพงษ์ นิลนามะ</td>
+		<td class="left" style="border: 1px solid #000;"> นายดิษฐพงษ์ นิลนามะ</td>
 	</tr>
 
-	<tr height="50"> 
+	<tr height="50">
 		<td colspan="3" align="right"  width="40%">รหัสประจำประชาชน :</td>
-		<td class="left" style="border: 1px solid #eee;"> 14854785423125</td>
+		<td class="left" style="border: 1px solid #000;"> 14854785423125</td>
 	</tr>
 
-	<tr height="50"> 
+	<tr height="50">
 		<td colspan="3" align="right" width="40%">เบอร์ติดต่อ :</td>
-		<td class="left" width="40%" style="border: 1px solid #eee;"> 0821428742</td>
+		<td class="left" width="40%" style="border: 1px solid #000;"> 0821428742</td>
 	</tr>
 
-	<tr height="50"> 
+	<tr height="50">
 		<td colspan="3" align="right" width="40%">ชื่อ – นามสกุล (ผู้ร่วมสมัคร 1) :</td>
-		<td class="left" width="40%" style="border: 1px solid #eee;">แจ๊ค ยุทธนา</td>
+		<td class="left" width="40%" style="border: 1px solid #000;">แจ๊ค ยุทธนา</td>
 	</tr>
 
-	<tr height="50"> 
+	<tr height="50">
 		<td colspan="3" align="right" width="40%">ชื่อ – นามสกุล (ผู้ร่วมสมัคร 2) :</td>
-		<td class="left" width="40%" style="border: 1px solid #eee;">เต้ ไชยวัฒน์</td>
-	</tr> 
+		<td class="left" width="40%" style="border: 1px solid #000;">เต้ ไชยวัฒน์</td>
+	</tr>
 
 	<tr height="10"><td colspan="4"></td></tr>
 	<tr height="30">
-		<td align="left" colspan="3" >จำนวนเงินเป็นตัวอักษร</td> 
-		<td align="right">จำนวนเงิน (บาท)</td> 
+		<td align="left" colspan="3" >จำนวนเงินเป็นตัวอักษร</td>
+		<td align="right">จำนวนเงิน (บาท)</td>
 	</tr>
 	<tr height="30">
-		<td align="left" colspan="3" style="border: 1px solid #eee;" width="45%">สองหมื่นหนึ่งพันบาทถ้วน</td> 
-		<td align="right" style="border: 1px solid #eee;">21,000 บาท</td> 
+		<td align="left" colspan="3" style="border: 1px solid #000;" width="45%">สองหมื่นหนึ่งพันบาทถ้วน</td>
+		<td align="right" style="border: 1px solid #000;">21,000 บาท</td>
 	</tr>
 	<tr height="20"><td colspan="4"></td></tr>
-	<tr> 
+	<tr>
 		<td width="120px" align="left">หมายเหตุ<br/></td>
 		<td colspan="4" class="left" >
 			1. ใบชำระค่าเรียน 1 ใบต่อ 1 คอร์ส<br/>
 			2. ผู้สมัครกรุณากรอกข้อมูลและตรวจสอบความถูกต้องก่อนยื่นชำระเงินที่เคาท์เตอร์ธนาคาร
 		</td>
-	</tr> 
+	</tr>
 	<tr>
 		<td colspan="4"><br/>ผู้นำฝาก/Deposit by..................................................................................... เจ้าหน้าที่ธนาคาร ............................................................ <hr/></td>
-	</tr> 
+	</tr>
 	<tr><td colspan="4" align="left"><h4>รายละเอียด</h4></td></tr>
 	<tr><td colspan="4" align="left"  >
 		<p style="font-size:11pt;">&emsp;1. กรุณาชำระเงิน ภายใน 7 วัน หลังการสมัคร หากไม่ชำระตามกำหมด การสมัครนั้นจะถือว่าเป็นโมฆะ <br/>
@@ -148,16 +148,16 @@ $html = '
 			<br/>&emsp;7. ผู้เข้าร่วมงานการมีสิทธิลุ้นรับรางวัลพิเศษจากสถาบันกวดวิชา jknowledge</p>
 
 		</td>
-	</tr> 
+	</tr>
 	<tr><td colspan="4" align="left"><h4>ติดต่อสอบถาม</h4></td></tr>
 	<tr><td colspan="4" align="left">
 		<p style="font-size:11pt;">&emsp;Tel : พี่พล 094-575-4777 Line ID : jtutor4, &nbsp;
-		&emsp;Tel : พี่เว 094-575-6777 Line ID : jtutor6, &nbsp;
-		&emsp;Tel : พี่มิ้ว 094-575-8777 Line ID : jtutor8, &nbsp;
-		&emsp;Tel : พี่ผิง 061-093-7688 Line ID : jknowledge_sisaket , &nbsp;
-		&emsp;Tel : พี่คาร์บอม 094-291-4542 Line ID : Cabomz</p>
-	</td>
-</tr> 
+			&emsp;Tel : พี่เว 094-575-6777 Line ID : jtutor6, &nbsp;
+			&emsp;Tel : พี่มิ้ว 094-575-8777 Line ID : jtutor8, &nbsp;<br/>
+			&emsp;Tel : พี่ผิง 061-093-7688 Line ID : jknowledge_sisaket , &nbsp;
+			&emsp;Tel : พี่คาร์บอม 094-291-4542 Line ID : Cabomz</p>
+		</td>
+	</tr>
 </table>
 ';
 
@@ -167,13 +167,13 @@ $pdf->SetDrawColor(255,0,0);
 $pdf->SetTextColor(0,00,'b');
 
 // print a cell
-// สร้างเนื้อหาจาก  HTML code  
-$pdf->writeHTML( iconv('UTF-8','',$html), true, 0, true, 0);
+// สร้างเนื้อหาจาก  HTML code
+$pdf->writeHTML($html, true, 0, true, 0);
 
 // ---------------------------------------------------------
 
 //Close and output PDF document
-	$pdf->Output('testpdf', 'I');	//load document
+	$pdf->Output('testpdf.pdf', 'I');	//load document แสดง pdf
 //============================================================+
 // END OF FILE
 //============================================================+
