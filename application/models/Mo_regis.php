@@ -10,19 +10,19 @@ class Mo_regis extends CI_Model {
 	}
 
 	function insertCourse(){  // เพิ่มคอร์สเรียน
-		$course_code = $this->input->post('course_code');
+		
 		$course_name = $this->input->post('course_name');
 		$course_price = $this->input->post('course_price');
-		$status = $this->input->post('status');
+		$is_require_room = $this->input->post('is_require_room');
 		$comment = $this->input->post('comment');
 
 		$date = date("Y-m-d H:i:s");
 
 		$data_course = array(
-			'course_code' => $course_code,
 			'course_name' => $course_name,
 			'price' => $course_price,
-			'status' => $status,
+			'status' => 1,
+			'is_require_room' => $is_require_room,
 			'comment' => $comment,
 			'id_create' => '11111',
 			'dt_create' => $date,
@@ -30,7 +30,9 @@ class Mo_regis extends CI_Model {
 			// 'dt_update' => $date,
 			);
 		$this->db->insert('course',$data_course);
-		redirect('Registration/course','refresh');
+		//redirect('Registration/course','refresh');
+		return TRUE;
+
 	}
 
 	public function get_course()  //แสดงคอร์ดเรียน
@@ -39,20 +41,19 @@ class Mo_regis extends CI_Model {
 		return $getCourse;
 	}
 
-	public function update_course()
+	public function updateCourse()
 	{
 		$course_id = $this->input->post('id_course');
-		$course_code = $this->input->post('course_code');
 		$course_name = $this->input->post('course_name');
-		$status = $this->input->post('status');
+		$is_require_room = $this->input->post('is_require_room');
 		$comment = $this->input->post('comment');
 
 		$date = date("Y-m-d H:i:s");
 
 		$update_course = array(
-			'course_code' => $course_code,
 			'course_name' => $course_name,
-			'status' => $status,
+			'status' => 1,
+			'is_require_room' => $is_require_room,
 			'comment' => $comment,
 			'id_create' => '11111',
 			// 'dt_create' => $date,
@@ -64,9 +65,9 @@ class Mo_regis extends CI_Model {
 		redirect('Registration/course','refresh');
 	}
 
-	public function del_course($value='')
+	public function delCourse($value='')
 	{
-		$this->db->where('course_code',$value);
+		$this->db->where('id_course',$value);
 		$this->db->delete('course');
 		redirect('Registration/course','refresh');
 	}

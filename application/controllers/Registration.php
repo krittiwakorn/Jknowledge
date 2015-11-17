@@ -29,7 +29,7 @@ class Registration extends CI_Controller
 
 	public function insertCourse()
 	{
-		$this->form_validation->set_rules('course_code', 'รหัสคอร์สเรียน', 'trim|required|xss_clean|numeric|max_length[11]');
+		
 		$this->form_validation->set_rules('course_name', 'ชื่ออคอร์ส', 'trim|required|xss_clean|');
 		$this->form_validation->set_rules('course_price', 'ราคา', 'trim|required|numeric|xss_clean');
 		// ----set error message----//
@@ -41,6 +41,7 @@ class Registration extends CI_Controller
 			return false;
 		} else {
 			$this->Mo_regis->insertCourse();
+			$this->course();
 		}
 	}
 
