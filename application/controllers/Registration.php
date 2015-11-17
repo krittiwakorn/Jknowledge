@@ -13,7 +13,7 @@ class Registration extends CI_Controller
 		$this->load->model('Mo_regis', '', true);
 		// $this->load->library('Pdf'); // Load library
 		$this->load->library('tcpdf');
-		// $this->pdf->fontpath = 'font/'; // Specify font folder
+		$this->pdf->fontpath = 'font'; // Specify font folder
 	}
 
 	public function index()
@@ -133,9 +133,8 @@ class Registration extends CI_Controller
 
 	public function tcpdf()
 	{
-		$this->load->view('header');
+
 		$this->load->view('tcpdf');
-		$this->load->view('footer');
 	}
 
 }
