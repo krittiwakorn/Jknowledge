@@ -6,11 +6,13 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <meta name="description" content="">
      <meta name="author" content="">
-     <title>ระบบลงทะเบียนออนไลน์ออก </title>
+     <title>ระบบลงทะเบียนออนไลน์</title>
      <!-- Bootstrap Core CSS -->
      <link href="<?= base_url();?>css/bootstrap.min.css" rel="stylesheet">
      <!-- Bootstrap Datable -->
      <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>DataTables/media/css/jquery.dataTables.css">
+      <!-- Custom Fonts -->
+    <link href="<?php echo base_url();?>font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
      <!-- Bootstrap Switch -->
      <link href="<?php echo base_url();?>css/bootstrap-switch/bootstrap-switch.css" rel="stylesheet">
      <!-- Custom CSS -->
@@ -39,7 +41,7 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                          </button>
-                         <a class="navbar-brand" href="registration">Start Bootstrap</a>
+                         <!-- <a class="navbar-brand" href="registration">Start Bootstrap</a> -->
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -49,10 +51,13 @@
                                    <?php echo anchor('registration/course', 'เพิ่มคอร์ส'); ?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/manageUser', 'เพิ่มแอดมิน');?>
+                                   <?php echo anchor('registration/courseDetail', 'จัดการคอร์สเรียน');?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/report', 'รายงาน');?>
+                                   <?php echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ');?>
+                              </li>
+                              <li>
+                                   <?php echo anchor('registration/report', 'จัดการข้อมูลการสมัครเรียน');?>
                               </li>
                          </ul>
                     </div>

@@ -15,7 +15,7 @@
 				<table id="" class="display" cellspacing="0" width="100%">
 					<thead>
 						<th>ชื่อ-นามสกุล</th>
-						<th>รหัสประจำตัวประชาชน</th>
+						<th>เลขประจำตัวประชาชน</th>
 						<th>โรงเรียน</th>
 						<th>เบอร์ติดต่อ</th>
 						<th>คอร์สเรียน</th>

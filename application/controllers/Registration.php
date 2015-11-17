@@ -21,10 +21,7 @@ class Registration extends CI_Controller
 
 	public function course()
 	{
-		$data = array(
-			'getCourse' => $this->Mo_regis->get_course(),
-			);
-		$this->load->view('course', $data);
+		$this->load->view('course');
 	}
 
 	public function insertCourse()
@@ -49,8 +46,9 @@ class Registration extends CI_Controller
 	{
 		if ($this->input->post('course_update') == 'course_update') {
 			$this->Mo_regis->updateCourse();
+			$this->courseDetail();
 		} else {
-			$this->course();
+			$this->courseDetail();
 		}
 	}
 
@@ -58,9 +56,18 @@ class Registration extends CI_Controller
 	{
 		if ($value != null) {
 			$this->Mo_regis->delCourse($value);
+			$this->courseDetail();
 		} else {
-			$this->course();
+			$this->courseDetail();
 		}
+	}
+
+	public function courseDetail()
+	{
+		$data = array(
+			'getCourse' => $this->Mo_regis->get_course(),
+			);
+		$this->load->view('course_detail',$data);
 	}
 
 	public function manageUser()

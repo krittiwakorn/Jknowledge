@@ -62,14 +62,16 @@ class Mo_regis extends CI_Model {
 			);
 		$this->db->where('id_course',$course_id);
 		$this->db->update('course',$update_course);
-		redirect('Registration/course','refresh');
+		// /redirect('Registration/course','refresh');
+		return TRUE;
 	}
 
 	public function delCourse($value='')
 	{
 		$this->db->where('id_course',$value);
 		$this->db->delete('course');
-		redirect('Registration/course','refresh');
+		//redirect('Registration/course','refresh');
+		return TRUE;
 	}
 
 	public function manage_status($status){
