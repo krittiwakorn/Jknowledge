@@ -11,9 +11,13 @@ class Registration extends CI_Controller
 		parent::__construct();
 		date_default_timezone_set('Asia/Bangkok');
 		$this->load->model('Mo_regis', '', true);
-		// $this->load->library('Pdf'); // Load library
+		$this->load->library('Pdf'); // Load library
 		$this->load->library('tcpdf');
+<<<<<<< HEAD
 		$this->pdf->fontpath = 'font'; // Specify font folder
+=======
+		$this->pdf->fontpath = 'font/'; // Specify font folder
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 	}
 
 	public function index()
@@ -133,6 +137,20 @@ class Registration extends CI_Controller
 
 	public function tcpdf()
 	{
+<<<<<<< HEAD
+=======
+		// $pdf = new Pdf('P', 'mm', 'A4', true, 'UTF-8', false);
+		// $pdf->SetTitle('My Title');
+		// $pdf->SetHeaderMargin(30);
+		// $pdf->SetTopMargin(20);
+		// $pdf->setFooterMargin(20);
+		// $pdf->SetAutoPageBreak(true);
+		// $pdf->SetAuthor('Author');
+		// $pdf->SetDisplayMode('real', 'default');
+
+		// $pdf->Write(5, 'Some sample text');
+		// $pdf->Output();
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 
 		$this->load->view('tcpdf');
 	}

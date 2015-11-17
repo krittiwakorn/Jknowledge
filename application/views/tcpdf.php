@@ -1,6 +1,9 @@
 <?php
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 =======
 >>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 // create new PDF document
@@ -48,6 +51,7 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 // add a page
 $pdf->AddPage();
 // set font
+<<<<<<< HEAD
 <<<<<<< HEAD
 // $pdf->SetFont('helvetica', '', 14);
 $pdf->AddFont('THSarabun','B','THSarabun.php');
@@ -171,6 +175,14 @@ $pdf->Write(0, 'Example of Text Hyphenation', '', 0, 'L', true, 0, false, false,
 
 $pdf->Ln(10);
 
+=======
+$pdf->SetFont('helvetica', '', 14);
+
+$pdf->Write(0, 'Example of Text Hyphenation', '', 0, 'L', true, 0, false, false, 0);
+
+$pdf->Ln(10);
+
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 /*
 Unicode Data for SHY:
 	Name : SOFT HYPHEN, commonly abbreviated as SHY
@@ -209,8 +221,12 @@ $pdf->SetTextColor(0,63,300);
 
 // print a cell
 <<<<<<< HEAD
+<<<<<<< HEAD
 // สร้างเนื้อหาจาก  HTML code
 $pdf->writeHTML($html, true, 0, true, 0);
+=======
+$pdf->writeHTMLCell(50, 0, '', '',iconv('UTF-8','UTF-8',$html), 1, 1, 0, true, 'I');
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
 =======
 $pdf->writeHTMLCell(50, 0, '', '',iconv('UTF-8','UTF-8',$html), 1, 1, 0, true, 'I');
 >>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
@@ -218,6 +234,7 @@ $pdf->writeHTMLCell(50, 0, '', '',iconv('UTF-8','UTF-8',$html), 1, 1, 0, true, '
 // ---------------------------------------------------------
 
 //Close and output PDF document
+<<<<<<< HEAD
 <<<<<<< HEAD
 	$pdf->Output('testpdf.pdf', 'I');	//load document แสดง pdf
 =======
@@ -227,3 +244,10 @@ $pdf->Output('example_046.pdf', 'I');
 //============================================================+
 // END OF FILE
 //============================================================+
+=======
+$pdf->Output('example_046.pdf', 'I');
+
+//============================================================+
+// END OF FILE
+//============================================================+
+>>>>>>> parent of 8627ec4... เต้ อัพเดท pdf เปลี่ยนจาก fpdf เป็น tcpdf
