@@ -39,6 +39,11 @@ class Register extends CI_Controller {
 		$this->load->view('register_search');
 	}
 
+	public function register_payment()
+	{
+		$this->load->view('register_payment');
+	}
+
 	public function register_check_status()
 	{
 		$this->load->view('register_check_status');

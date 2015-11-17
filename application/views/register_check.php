@@ -33,7 +33,7 @@
 			<div class="col-sm-3" style="text-align:right;">เลขที่ใบสมัคร : </div>
 			<div class="col-sm-3" style="text-align:left;">JK5811A10001 </div>
 			<div class="col-sm-3" style="text-align:right;">คอร์สที่สมัคร : </div>
-			<div class="col-sm-3" style="text-align:left;">คณิตศาสตร์ ม.6 </div>
+			<div class="col-sm-3" style="text-align:left;">BIG J DAY</div>
 		</div>
 		<hr/> 
 		<div class="row">
