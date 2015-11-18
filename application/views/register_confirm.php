@@ -1,7 +1,7 @@
 <?php $this->load->view('header_register');?>
 <div class="row" style="margin-top:-30px;">
 	<div class="panel panel-primary">
-		<div class="panel-heading" style="font-size:25px;">รับแจ้งการชำระเงิน</div>
+		<div class="panel-heading" style="font-size:25px;">แจ้งการชำระเงิน</div>
 		<div class="panel-body">
 		<!-- insert register  -->  
 		<?php echo form_open('Register/register_confirm_success','class="form-horizontal " role="form"');?>

@@ -7,9 +7,17 @@
 		<div class="row">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
-				<a href="<?=base_url()?>register/register_entry"><button class="btn btn-success" style="width:100%;height:80px;font-size:40px;">สมัครเรียนออนไลน์</button></a>
+				<a href="<?=base_url()?>register/register_entry"><button class="btn btn-success" style="width:100%;height:80px;font-size:40px;">สมัครเรียน</button></a>
 			</div>
 			<div class="col-sm-3"></div> 
+		</div> 
+		<div class="row"><br><br><br></div>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6"> 
+				<a href="<?=base_url()?>register/register_confirm/"><button class="btn btn-warning" style="width:100%;height:80px;font-size:40px;">แจ้งการชำระเงิน</button></a>		
+			</div>
+			<div class="col-sm-3"></div>
 		</div>
 		<div class="row"><br><br><br></div>
 		<div class="row">
@@ -19,14 +27,6 @@
 			</div>
 			<div class="col-sm-3"></div>
 		</div> 
-		<div class="row"><br><br><br></div>
-		<div class="row">
-			<div class="col-sm-3"></div>
-			<div class="col-sm-6"> 
-				<a href="<?=base_url()?>register/register_confirm/"><button class="btn btn-warning" style="width:100%;height:80px;font-size:40px;">รับแจ้งชำระเงิน</button></a>		
-			</div>
-			<div class="col-sm-3"></div>
-		</div>
 		<br><br><br><br> 
 	</div> <!-- ./ end panel -->
 </div> <!-- ./ end div.row --> 
