@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.0.2
+-- version 4.4.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 14, 2015 at 01:38 AM
--- Server version: 10.0.17-MariaDB
--- PHP Version: 5.6.14
+-- Host: 127.0.0.1
+-- Generation Time: Nov 18, 2015 at 11:17 AM
+-- Server version: 5.6.26
+-- PHP Version: 5.6.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,24 +26,26 @@ SET time_zone = "+00:00";
 -- Table structure for table `course`
 --
 
-CREATE TABLE `course` (
+CREATE TABLE IF NOT EXISTS `course` (
   `id_course` int(11) NOT NULL,
-  `course_code` char(50) NOT NULL,
   `course_name` varchar(100) NOT NULL,
   `price` decimal(11,0) NOT NULL COMMENT 'ค่าเรียน คอร์ด ต่อคน ',
+  `is_require_room` tinyint(4) NOT NULL,
   `status` tinyint(1) NOT NULL,
   `comment` varchar(1000) NOT NULL,
   `id_create` int(11) NOT NULL,
   `dt_create` datetime NOT NULL,
   `id_update` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `course`
 --
 
-INSERT INTO `course` (`id_course`, `course_code`, `course_name`, `price`, `status`, `comment`, `id_create`, `dt_create`, `id_update`) VALUES
-(1, '001', 'เขียนโปรแกรม', '5000', 1, 'test', 11111, '2015-11-13 22:42:18', 2222);
+INSERT INTO `course` (`id_course`, `course_name`, `price`, `is_require_room`, `status`, `comment`, `id_create`, `dt_create`, `id_update`) VALUES
+(4, 'BIG J DAY', '9000', 0, 1, 'o 1-4 คนคนละ 900 บาท\no 5 คนขึ้น ไปคนละ 700 บาท', 11111, '2015-11-17 20:39:34', 2222),
+(5, 'J Summer Camp 2016', '5000', 1, 1, 'ครู , วิศวะ , เภสชั/พยาบาล มนษุย์/นิติ/วิทยาการ', 11111, '2015-11-17 20:41:14', 2222),
+(7, 'J MED Camp', '5000', 1, 1, '', 11111, '2015-11-17 20:45:05', 2222);
 
 -- --------------------------------------------------------
 
@@ -51,9 +53,9 @@ INSERT INTO `course` (`id_course`, `course_code`, `course_name`, `price`, `statu
 -- Table structure for table `member`
 --
 
-CREATE TABLE `member` (
-  `id_member` int(10) UNSIGNED NOT NULL COMMENT 'running number',
-  `is_type` int(10) UNSIGNED NOT NULL COMMENT 'ID ประเภทพนักงาน',
+CREATE TABLE IF NOT EXISTS `member` (
+  `id_member` int(10) unsigned NOT NULL COMMENT 'running number',
+  `is_type` int(10) unsigned NOT NULL COMMENT 'ID ประเภทพนักงาน',
   `memp_code` varchar(50) NOT NULL COMMENT 'รหัสพนักงาน',
   `firstname` varchar(100) NOT NULL COMMENT 'ชื่อพนักงาน ภาษาอังกฤษ',
   `lastname` varchar(100) NOT NULL COMMENT 'นามสกุลพนักงาน ภาษาอังกฤษ',
@@ -64,9 +66,9 @@ CREATE TABLE `member` (
   `password` varchar(50) NOT NULL COMMENT 'Password  MD5 CODE',
   `comment` varchar(4000) DEFAULT NULL COMMENT 'หมายเหตุ',
   `status` tinyint(4) NOT NULL DEFAULT '1' COMMENT 'สถานะรายการ',
-  `id_create` int(10) UNSIGNED DEFAULT NULL COMMENT 'ID ผู้สร้าง',
+  `id_create` int(10) unsigned DEFAULT NULL COMMENT 'ID ผู้สร้าง',
   `dt_create` datetime DEFAULT NULL COMMENT 'datetime สร้างครั้งแรก',
-  `id_update` int(10) UNSIGNED DEFAULT NULL COMMENT 'ID ผู้แก้ไขล่าสุด',
+  `id_update` int(10) unsigned DEFAULT NULL COMMENT 'ID ผู้แก้ไขล่าสุด',
   `dt_update` datetime DEFAULT NULL COMMENT 'datetime แก้ไขล่าสุด'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -76,17 +78,17 @@ CREATE TABLE `member` (
 -- Table structure for table `province`
 --
 
-CREATE TABLE `province` (
-  `id_province` int(10) UNSIGNED NOT NULL COMMENT 'running number',
+CREATE TABLE IF NOT EXISTS `province` (
+  `id_province` int(10) unsigned NOT NULL COMMENT 'running number',
   `province_code` varchar(50) DEFAULT NULL COMMENT 'รหัสจังหวัด',
   `province_name` varchar(150) DEFAULT NULL COMMENT 'ชื่อจังหวัด ภาษาอังกฤษ',
   `comment` varchar(1000) DEFAULT NULL COMMENT 'หมายเหตุ',
   `status` tinyint(4) NOT NULL COMMENT 'สถานะรายการ',
-  `id_create` int(10) UNSIGNED NOT NULL COMMENT 'id ผู้สร้าง',
+  `id_create` int(10) unsigned NOT NULL COMMENT 'id ผู้สร้าง',
   `dt_create` datetime NOT NULL COMMENT 'datetime สร้างครั้งแรก',
-  `id_update` int(10) UNSIGNED NOT NULL COMMENT 'id ผู้แก้ไขล่าสุด',
+  `id_update` int(10) unsigned NOT NULL COMMENT 'id ผู้แก้ไขล่าสุด',
   `dt_update` datetime NOT NULL COMMENT 'datetime แก้ไขล่าสุด'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `province`
@@ -178,7 +180,7 @@ INSERT INTO `province` (`id_province`, `province_code`, `province_name`, `commen
 -- Table structure for table `register_dtl`
 --
 
-CREATE TABLE `register_dtl` (
+CREATE TABLE IF NOT EXISTS `register_dtl` (
   `id_register_dtl` int(11) NOT NULL COMMENT 'ID Runnumber',
   `id_register_hdr` int(11) NOT NULL COMMENT 'ID การสมัคร Header',
   `idcard` varchar(13) NOT NULL COMMENT 'รหัสประจำตัวประชาชน',
@@ -208,7 +210,7 @@ CREATE TABLE `register_dtl` (
 -- Table structure for table `register_hdr`
 --
 
-CREATE TABLE `register_hdr` (
+CREATE TABLE IF NOT EXISTS `register_hdr` (
   `id_register_hdr` int(11) NOT NULL COMMENT 'ID Runnumber',
   `register_code` varchar(50) NOT NULL COMMENT 'รหัสการสมัคร',
   `register_date` datetime NOT NULL COMMENT 'วันที่สมัคร',
@@ -231,22 +233,21 @@ CREATE TABLE `register_hdr` (
   `is_class` tinyint(1) DEFAULT NULL COMMENT '1= ม.1 ,2=ม2, --- 6=ม6',
   `ref_regis_file` varchar(200) DEFAULT NULL COMMENT 'เอกสารอ้างอิงการสมัคร',
   `ref_regis_con` varchar(200) DEFAULT NULL COMMENT 'เอกสารอ้างอิง ยืนยันการการโอนเงิน',
-  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'สถานะการสมัคร 1=Create, 2=ยืนยันการสมัคร, 3=ตรวจสอบการสมัครแล้ว, 4=หมดอายุการสมัคร, 0=ยกเลิกการสมัคร',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'สถานะการสมัคร 1=ยังไม่จ่ายเงิน, 2=จ่ายเงินแล้ว, 3=ตรวจสอบการสมัครแล้ว, 4=หมดอายุการสมัคร, 0=ยกเลิกการสมัคร',
   `comment` varchar(1000) DEFAULT NULL,
   `id_create` int(11) DEFAULT NULL,
   `dt_create` datetime DEFAULT NULL,
   `id_update` int(11) DEFAULT NULL,
   `dt_update` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 --
 -- Dumping data for table `register_hdr`
 --
 
 INSERT INTO `register_hdr` (`id_register_hdr`, `register_code`, `register_date`, `confirm_date`, `approve_date`, `idcard`, `is_iti`, `firstname`, `lastname`, `birth_date`, `id_course`, `mobile`, `email`, `facebook`, `line_id`, `amount`, `price`, `school`, `id_province`, `is_class`, `ref_regis_file`, `ref_regis_con`, `status`, `comment`, `id_create`, `dt_create`, `id_update`, `dt_update`) VALUES
-(1, '001', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '1111000223400', 1, 'เต้', 'ไชยวัฒน์', '2015-11-13', 1, '1220345670', 'te@hotmail.com', 'te@facebook.com', 'te@line.me', 1, '5000.00', 'โรงเรียนวัด', 10, 6, NULL, NULL, 1, 'ไม่พัก', NULL, NULL, NULL, NULL),
-(2, '002', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '', 2, 'เต้', 'เต้', '0000-00-00', 1, '', NULL, NULL, NULL, 0, '0.00', NULL, 10, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL),
-(3, '003', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '', 1, 'ทดสอบ', 'ทดสอบ', '2015-11-13', 1, '', NULL, NULL, NULL, 0, '0.00', NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, NULL);
+(1, '001', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '2015-11-13 00:00:00', '1111000223400', 1, 'เต้', 'ไชยวัฒน์', '2015-11-13', 4, '1220345670', 'te@hotmail.com', 'te@facebook.com', 'te@line.me', 1, '5000.00', 'โรงเรียนวัด', 10, 6, NULL, NULL, 1, 'ไม่พัก', NULL, NULL, NULL, NULL),
+(3, '003', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '2015-11-14 00:00:00', '', 1, 'ทดสอบ', 'ทดสอบ', '2015-11-13', 5, '', NULL, NULL, NULL, 0, '0.00', NULL, NULL, NULL, NULL, NULL, 3, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -254,7 +255,7 @@ INSERT INTO `register_hdr` (`id_register_hdr`, `register_code`, `register_date`,
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL,
   `user_first_name` varchar(100) NOT NULL,
   `user_last_name` varchar(100) NOT NULL,
@@ -262,7 +263,7 @@ CREATE TABLE `users` (
   `user_gender` enum('male','female') NOT NULL,
   `user_status` enum('user','admin') NOT NULL,
   `user_password` char(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -328,17 +329,17 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `course`
 --
 ALTER TABLE `course`
-  MODIFY `id_course` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_course` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id_member` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'running number';
+  MODIFY `id_member` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'running number';
 --
 -- AUTO_INCREMENT for table `province`
 --
 ALTER TABLE `province`
-  MODIFY `id_province` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'running number', AUTO_INCREMENT=79;
+  MODIFY `id_province` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'running number',AUTO_INCREMENT=79;
 --
 -- AUTO_INCREMENT for table `register_dtl`
 --
@@ -348,12 +349,12 @@ ALTER TABLE `register_dtl`
 -- AUTO_INCREMENT for table `register_hdr`
 --
 ALTER TABLE `register_hdr`
-  MODIFY `id_register_hdr` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID Runnumber', AUTO_INCREMENT=4;
+  MODIFY `id_register_hdr` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID Runnumber',AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
