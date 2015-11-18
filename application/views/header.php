@@ -57,7 +57,14 @@
                                    <?php echo anchor('registration/courseDetail', 'จัดการข้อมูลคอร์สเรียน');?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ');?>
+                                   <?php //echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ');?>
+                                   <?php echo anchor('registration/manageMember', 'เพิ่มข้อมูลผู้ดูแลระบบ', 'attributes');?>
+                              </li>
+                              <li>
+                                   <?php //echo anchor('registration/manageMember', 'จัดการข้อมมูล 1');?>
+                              </li>
+                               <li>
+                                   <?php echo anchor('registration/manageMember_info', 'จัดการข้อมูลผู้ดูแลระบบ 1');?>
                               </li>
                          </ul>
                     </div>

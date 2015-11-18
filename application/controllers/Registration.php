@@ -81,6 +81,12 @@ class Registration extends CI_Controller
 		$this->load->view('member');
 	}
 
+	public function manageMember_info()
+	{
+		$data = array('get_users' => $this->db->get('users')->result());
+		$this->load->view('member_info',$data);
+	}
+
 	public function manageStatus()
 	{
 		$my_status = $this->input->post('my-checkbox');

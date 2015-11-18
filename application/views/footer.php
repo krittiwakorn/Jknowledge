@@ -23,18 +23,6 @@
 <!-- Bootstrap Confirme -->
 <script type="text/javascript" src="path/to/bootstrap-confirmation.js"></script>
 
-<script>
-	function myFunction() {
-		var txt;
-		var r = confirm("Press a button!");
-		if (r == true) {
-			txt = "You pressed OK!";
-		} else {
-			txt = "You pressed Cancel!";
-		}
-		document.getElementById("demo").innerHTML = txt;
-	}
-</script>
 </body>
 
 </html>

@@ -19,15 +19,7 @@
 			</div>
 			<h3>ข้อมูลทั่วไป </h3>
 			<div class="form-group col-sm-12  ">
-				<div class="col-sm-3">
-					<label for="is_type" class="control-label">ID พนักงาน:</label>
-					<input type="text" class="form-control" id="is_type" name="is_type" />
-				</div>
-				<div class="col-sm-3">
-					<label for="memp_code" class="control-label">รหัสพนักงาน:</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
-				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<label for="is_require_room" class="control-label">ชื่อ:</label>&nbsp;&nbsp;
 					<!-- <div class="radio col-sm-6"> -->
 					<label >
@@ -44,35 +36,32 @@
 					</label>
 					<input type="text" class="form-control" id="memp_code" name="memp_code" />
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<label for="memp_code" class="control-label">นามสกุล:</label>
 					<input type="text" class="form-control" id="memp_code" name="memp_code" />
 				</div>
-			</div>
-			<div class="form-group col-sm-12  ">
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<label for="is_type" class="control-label">อีเมลล์:</label>
 					<input type="text" class="form-control" id="is_type" name="is_type" />
 				</div>
-				<div class="col-sm-3">
+			</div>
+			<div class="form-group col-sm-12  ">
+				<div class="col-sm-4">
 					<label for="memp_code" class="control-label">เบอร์โทร:</label>
 					<input type="text" class="form-control" id="memp_code" name="memp_code" />
 				</div>
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<label for="memp_code" class="control-label">มือถือ:</label>
 					<input type="text" class="form-control" id="memp_code" name="memp_code" />
 				</div>
-			</div>
-
-			<div class="form-group col-sm-12">
-				<div class="col-sm-6">
+				<div class="col-sm-4">
 					<label for="comment" class=" control-label">หมายเหตุ:</label>
 					<textarea class="form-control" name="comment" id="comment" ></textarea>
 					<?php echo form_error('comment','<span class="label label-warning">','</span>');?>
 				</div>
 			</div>
 			<div class="form-group col-sm-12">
-				<div class="col-sm-12 col-md-offset-8">
+				<div class="col-sm-12 col-md-offset-10">
 					<button type="submit" class="btn btn-success ">บันทึก</button>
 					<button type="reset" class="btn btn-warning ">ยกเลิก</button>
 				</div>

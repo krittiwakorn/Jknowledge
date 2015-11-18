@@ -171,7 +171,7 @@ $pdf->writeHTML($html, true, 0, true, 0);
 
 //Close and output PDF document
 
-	$pdf->Output('ระบบลงทะเบียนออนไลน์.pdf','I');	//load document แสดง pdf
+	$pdf->Output('register_success.pdf','I');	//load document แสดง pdf
 
 //============================================================+
 // END OF FILE
