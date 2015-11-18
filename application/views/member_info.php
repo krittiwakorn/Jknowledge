@@ -26,13 +26,13 @@
 								<td><?php echo $row_users->user_email;?></td>
 								<td><?php echo $row_users->user_gender;?></td>
 								<td class="col-md-2">
-									<?php echo anchor('#', 'แก้ไข','class="btn btn-warning col-md-4" data-toggle="modal" data-target=".bs-example-modal-lg'.'1'.'"');?>
+									<?php echo anchor('#', 'แก้ไข','class="btn btn-warning col-md-4" data-toggle="modal" data-target=".bs-example-modal-lg'.$row_users->user_id.'"');?>
 									&nbsp;&nbsp; &nbsp;&nbsp; <div class='col-md-1'></div>
-									<?php echo anchor('Registration/delCourse/'.'1', 'ลบ','class="btn btn-danger col-md-4" OnClick="JavaScript:confirm();" ');?>
+									<?php echo anchor('Registration/delMember/'.'1', 'ลบ','class="btn btn-danger col-md-4" OnClick="JavaScript:confirm();" ');?>
 								</td>
 							</tr>
 							<!-- Large modal -->
-							<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+							<div class="modal fade bs-example-modal-lg<?php echo $row_users->user_id;?>" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
 								<div class="modal-dialog modal-lg">
 									<div class="modal-content col-md-12">
 										<div class="modal-header">

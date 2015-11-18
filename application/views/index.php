@@ -6,14 +6,14 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-6">
-				<?php echo anchor('registration/report', 'จัดการข้อมูลการสมัครเรียน', 'class="btn btn-primary" style="width:100%;height:80px;font-size:40px;"');?>
+				<?php echo anchor('registration/report', 'จัดการข้อมูลผู้สมัครเรียน', 'class="btn btn-primary" style="width:100%;height:80px;font-size:40px;"');?>
 				</div>
 			</div>
 			<br><br><br><br>
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-6">
-					<?php echo anchor('registration/course', 'จัดการข้อมูลคอร์สเรียน', 'class="btn btn-success" style="width:100%;height:80px;font-size:40px;"');?>
+					<?php echo anchor('registration/course', 'จัดการข้อมูลคอร์ส', 'class="btn btn-success" style="width:100%;height:80px;font-size:40px;"');?>
 				</div>
 				<div class="col-sm-3"></div>
 			</div>
