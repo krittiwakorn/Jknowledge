@@ -15,10 +15,15 @@
 		<div class="row" style="margin-top:30px;">
 			<div class="col-sm-3"></div>
 			<div class="col-sm-6">
-				<label >คอร์สที่สมัคร</label>
-		 		<p>&emsp;&emsp;<input type="radio" name="id_course" value="1"  checked> BIG J DAY<br> </p>
-	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J SUMMER CAMP 2016 -- J MED Camp<br> </p>
-	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J SUMMER CAMP 2016 -- J KKU Camp<br> </p>
+				<label >คอร์สที่สมัคร</label> 
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="1"  checked> BIG J DAY<br> </p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J KKU Camp -- ครู<br> </p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J KKU Camp -- วิศวะ<br> </p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J KKU Camp -- เภสัช พยาบาล<br> </p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J KKU Camp -- มนุษย์ นิติ วิทยาการ<br></p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> J Med Camp<br></p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> ปูพื้นฐาน ม.4 <br></p>
+	            <p>&emsp;&emsp;<input type="radio" name="id_course" value="2"> ปูพื้นฐาน ม. 5<br></p> 
 	        </div>
 			<div class="col-sm-3"></div> 
 		</div>
