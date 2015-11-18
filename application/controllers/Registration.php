@@ -26,7 +26,7 @@ class Registration extends CI_Controller
 
 	public function insertCourse()
 	{
-		
+
 		$this->form_validation->set_rules('course_name', 'ชื่ออคอร์ส', 'trim|required|xss_clean|');
 		$this->form_validation->set_rules('course_price', 'ราคา', 'trim|required|numeric|xss_clean');
 		// ----set error message----//
@@ -74,6 +74,11 @@ class Registration extends CI_Controller
 	{
 		$data = array('get_users' => $this->db->get('users')->result());
 		$this->load->view('manage_user', $data);
+	}
+
+	public function manageMember()
+	{
+		$this->load->view('member');
 	}
 
 	public function manageStatus()

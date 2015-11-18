@@ -34,7 +34,6 @@
 								<div class="modal-content col-md-12">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-										<h4 class="modal-title">แสดงข้อมูล</h4>
 									</div>
 									<div class="panel panel-primary">
 										<div class="panel-heading">แก้ไขข้อมูล คอร์สเรียน	</div>
@@ -81,11 +80,11 @@
 															?>
 															<label >
 																<input type="radio" name="is_require_room" id="is_require_room_1" value="1"  />
-																พร้อมเปิด
+																รวมที่พัก
 															</label>
 															<label >
 																<input type="radio" name="is_require_room" id="is_require_room_0" value="2"   checked />
-																ไม่พร้อมเปิด
+																ไม่รวมที่พัก
 															</label>
 															<?php
 														}

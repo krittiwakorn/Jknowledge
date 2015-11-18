@@ -47,17 +47,17 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                          <ul class="nav navbar-nav">
                               <li>
+                                   <?php echo anchor('registration/report', 'จัดการข้อมูลการสมัครเรียน');?>
+                              </li>
+                              <li>
                                    <!-- <a href="course">เพิ่มคอร์ส</a> -->
                                    <?php echo anchor('registration/course', 'เพิ่มคอร์ส'); ?>
                               </li>
                               <li>
-                                   <?php echo anchor('registration/courseDetail', 'จัดการคอร์สเรียน');?>
+                                   <?php echo anchor('registration/courseDetail', 'จัดการข้อมูลคอร์สเรียน');?>
                               </li>
                               <li>
                                    <?php echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ');?>
-                              </li>
-                              <li>
-                                   <?php echo anchor('registration/report', 'จัดการข้อมูลการสมัครเรียน');?>
                               </li>
                          </ul>
                     </div>
