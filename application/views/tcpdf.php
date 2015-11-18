@@ -86,10 +86,13 @@ $html = '
 	</tr>
 	<tr height="10"><td colspan="4"></td></tr>
 	<tr height="10" >
-		<td colspan="3"  align="right" width="40%">ชื่อโครงกำรที่สมัคร :</td>
-		<td class="left" width="40%" style="border: 1px solid #000;" align="left"> R258110001</td>
+		<td colspan="3"  align="right" width="40%">เลขที่ใบสมัคร :</td>
+		<td class="left" width="40%" style="border: 1px solid #000;" align="left"> R158110001</td>
 	</tr>
-
+	<tr height="10" >
+		<td colspan="3"  align="right" width="40%">ชื่อโครงการที่สมัคร :</td>
+		<td class="left" width="40%" style="border: 1px solid #000;" align="left"> BIG J DAY</td>
+	</tr> 
 	<tr height="50">
 		<td colspan="3" align="right" width="40%">ชื่อ-นามสกุล :</td>
 		<td class="left" style="border: 1px solid #000;"> นายดิษฐพงษ์ นิลนามะ</td>
@@ -111,15 +114,14 @@ $html = '
 	<tr height="50">
 		<td colspan="3" align="right" width="40%">ชื่อ – นามสกุล (ผู้ร่วมสมัคร 2) :</td>
 		<td class="left" width="40%" style="border: 1px solid #000;">เต้ ไชยวัฒน์</td>
-	</tr>
-	<tr height="10"><td colspan="4"></td></tr>
+	</tr> 
 	<tr height="30">
 		<td align="left" colspan="3" >จำนวนเงินเป็นตัวอักษร</td>
-		<td align="right">จำนวนเงิน (บาท)</td>
+		<td align="right">จำนวนเงินที่ต้องชำระ (บาท)</td>
 	</tr>
 	<tr height="30">
-		<td align="left" colspan="3" style="border: 1px solid #000;" width="45%">สองหมื่นหนึ่งพันบาทถ้วน</td>
-		<td align="right" style="border: 1px solid #000;">21,000 บาท</td>
+		<td align="left" colspan="3" style="border: 1px solid #000;" width="45%">สองพันเจ็ดร้อยบาทถ้วน</td>
+		<td align="right" style="border: 1px solid #000;">2,700 บาท</td>
 	</tr>
 	<tr height="10"><td colspan="4"></td></tr>
 	<tr>
@@ -130,8 +132,9 @@ $html = '
 		</td>
 	</tr>
 	<tr>
-		<td colspan="4"><br/>ผู้นำฝาก/Deposit by.............................................................. เจ้าหน้าที่ธนาคาร ............................................................ <hr/></td>
+		<td colspan="4"> ผู้นำฝาก/Deposit by.............................................................. เจ้าหน้าที่ธนาคาร ............................................................ </td>
 	</tr>
+	<hr/><br/>
 	<tr><td colspan="4" align="left"><h4>รายละเอียด</h4></td></tr>
 	<tr><td colspan="4" align="left"  >
 		<p style="font-size:11pt;">&emsp;1. กรุณาชำระเงิน ภายใน 7 วัน หลังการสมัคร หากไม่ชำระตามกำหมด การสมัครนั้นจะถือว่าเป็นโมฆะ <br/>
@@ -149,10 +152,10 @@ $html = '
 	<tr><td colspan="4" align="left"><h4>ติดต่อสอบถาม</h4></td></tr>
 	<tr><td colspan="4" align="left">
 		<p style="font-size:11pt;">&emsp;Tel : พี่พล 094-575-4777 Line ID : jtutor4, &nbsp;
-			&emsp;Tel : พี่เว 094-575-6777 Line ID : jtutor6, &nbsp;
-			&emsp;Tel : พี่มิ้ว 094-575-8777 Line ID : jtutor8, &nbsp;<br/>
-			&emsp;Tel : พี่ผิง 061-093-7688 Line ID : jknowledge_sisaket , &nbsp;
-			&emsp;Tel : พี่คาร์บอม 094-291-4542 Line ID : Cabomz</p>
+			Tel : พี่เว 094-575-6777 Line ID : jtutor6, &nbsp;
+			Tel : พี่มิ้ว 094-575-8777 Line ID : jtutor8, &nbsp;<br/>
+			Tel : พี่ผิง 061-093-7688 Line ID : jknowledge_sisaket , &nbsp;
+			Tel : พี่คาร์บอม 094-291-4542 Line ID : Cabomz</p>
 		</td>
 	</tr>
 </table>
