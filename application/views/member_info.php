@@ -25,10 +25,16 @@
 								<td><?php echo $row_users->user_last_name;?></td>
 								<td><?php echo $row_users->user_email;?></td>
 								<td><?php echo $row_users->user_gender;?></td>
-								<td class="col-md-2">
+								<td class="col-md-2 ">
 									<?php echo anchor('#', 'แก้ไข','class="btn btn-warning col-md-4" data-toggle="modal" data-target=".bs-example-modal-lg'.$row_users->user_id.'"');?>
 									&nbsp;&nbsp; &nbsp;&nbsp; <div class='col-md-1'></div>
-									<?php echo anchor('Registration/delMember/'.'1', 'ลบ','class="btn btn-danger col-md-4" OnClick="JavaScript:confirm();" ');?>
+									<?php //echo anchor('Registration/delMember/'.'1', 'ลบ','class="btn btn-danger col-md-4" data-toggle="popover" data-placement="top" title="Popover Header" data-content="Some content inside the popover" ');?>
+									<button class="btn btn-danger col-md-4" data-toggle="popover" data-placement="top" title="Popover Header" data-content="Some content inside the popover">ลบ</button>
+									<script>
+										$(document).ready(function(){
+											$('[data-toggle="popover"]').popover('onclick');
+										});
+									</script>
 								</td>
 							</tr>
 							<!-- Large modal -->
@@ -120,11 +126,8 @@
 
 	<div class="container">
 		<h3>Popover Example</h3>
-		<a class="btn btn-success" href="#" data-toggle="popover" data-placement="top" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+		<button class="btn btn-success" data-toggle="popover" data-placement="top" title="Popover Header" data-content="Some content inside the popover">Toggle popover</button>
 	</div>
+
 	<?php $this->load->view('footer');?>
-	<script>
-		$(document).ready(function(){
-			$('[data-toggle="popover"]').popover('onclick');
-		});
-	</script>
+	

@@ -49,16 +49,15 @@
                               <li>
                                    <?php echo anchor('registration/report', 'จัดการข้อมูลการสมัครเรียน');?>
                               </li>
-                              <li>
-                                   <!-- <a href="course">เพิ่มคอร์ส</a> -->
+                             <!-- <li>
                                    <?php echo anchor('registration/course', 'เพิ่มคอร์ส'); ?>
-                              </li>
-                              <li>
+                              </li>-->
+                             <!-- <li>
                                    <?php echo anchor('registration/courseDetail', 'จัดการข้อมูลคอร์สเรียน');?>
-                              </li>
+                              </li>-->
                               <li>
                                    <?php //echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ');?>
-                                   <?php echo anchor('registration/manageMember', 'เพิ่มข้อมูลผู้ดูแลระบบ', 'attributes');?>
+                                   <?php echo anchor('registration/manageMember', 'เพิ่มข้อมูลผู้ดูแลระบบ');?>
                               </li>
                               <li>
                                    <?php //echo anchor('registration/manageMember', 'จัดการข้อมมูล 1');?>

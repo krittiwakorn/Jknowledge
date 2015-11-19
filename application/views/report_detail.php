@@ -58,19 +58,21 @@
 							<?php
 							switch ($regist_hdr->status_hdr) {
 								case '1':
-								echo '<h4><span class="label label-danger col-md-11">ยังไม่ชำระเงิน</span></h4>';
+								echo '<h4><span class="label label-danger col-md-11">สมัครแล้ว</span></h4>';
 								break;
 								case '2':
-								echo '<h4><span class="label label-primary col-md-11">จ่ายเงินแล้ว</span></h4>';
+								echo '<h4><span class="label label-primary col-md-11">รอการชำระเงิน</span></h4>';
 								break;
 								case '3':
-								echo '<h4><span class="label label-success col-md-11">ตรวจสอบการสมัครแล้ว</span></h4>';
+								echo '<h4><span class="label label-success col-md-11">แจ้งชำระเงิน</span></h4>';
 								break;
 								case '4':
-								echo '<h4><span class="label label-warning">หมดอายุการสมัคร</span></h4>';
+								echo '<h4><span class="label label-warning">กำลังตรวจสอบ</span></h4>';
 								break;
+								case '5';
+								echo '<h4><span class="label label-danger col-md-11">ยืนยันผลการตรวจสอบ</span></h4>';
 								default:
-								echo '<h4><span class="label label-danger">ยกเลิกการสมัคร</span></h4>';
+								echo '<h4><span class="label label-danger">สมัครแล้ว</span></h4>';
 								break;
 							}
 							?>

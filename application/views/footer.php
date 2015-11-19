@@ -5,7 +5,7 @@
 <script src="<?= base_url();?>js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="<?= base_url();?>js/bootstrap.js"></script>
+<!--<script src="<?= base_url();?>js/bootstrap.js"></script>-->
 <script src="<?= base_url();?>js/bootstrap.min.js"></script>
 
 <!-- Boostrap JavaScript Datatable -->
@@ -21,7 +21,7 @@
 <script src="<?php echo base_url();?>js/bootstrap-switch/bootstrap-switch.js"></script>
 
 <!-- Bootstrap Confirme -->
-<script type="text/javascript" src="path/to/bootstrap-confirmation.js"></script>
+<!--<script type="text/javascript" src="path/to/bootstrap-confirmation.js"></script>-->
 
 </body>
 
