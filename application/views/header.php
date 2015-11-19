@@ -64,7 +64,7 @@
                                    <?php //echo anchor('registration/manageMember', 'จัดการข้อมมูล 1');?>
                               </li>
                                <li>
-                                   <?php echo anchor('registration/manageMember_info', 'จัดการข้อมูลผู้ดูแลระบบ 1');?>
+                                   <?php echo anchor('registration/manageMember_info', 'จัดการข้อมูลผู้ดูแลระบบ ');?>
                               </li>
                          </ul>
                     </div>

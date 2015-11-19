@@ -2,7 +2,7 @@
 <div class="container">
 	<section >
 		<div class="panel panel-primary">
-			<div class="panel-heading"> จัดการสิทธิ์	</div>
+			<div class="panel-heading"> จัดการข้อมูลผู้ดูแลระบบ	</div>
 			<div class="panel-body">
 				<table id="" class="display" cellspacing="0" width="100%">
 					<thead>
