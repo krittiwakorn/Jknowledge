@@ -21,7 +21,7 @@
 			<div class="row">
 				<div class="col-sm-3"></div>
 				<div class="col-sm-6">
-					<?php echo anchor('registration/manageUser', 'จัดการข้อมูลผู้ดูแลระบบ', 'class="btn btn-warning" style="width:100%;height:80px;font-size:40px;"');?>
+					<?php echo anchor('registration/manageMember_info', 'จัดการข้อมูลผู้ดูแลระบบ', 'class="btn btn-warning" style="width:100%;height:80px;font-size:40px;"');?>
 				</div>
 				<div class="col-sm-3"></div>
 			</div>
