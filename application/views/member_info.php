@@ -55,7 +55,7 @@
 														</div>
 													</div>
 													<div class="form-group col-sm-12  ">
-													<h3>ข้อมูลทั่วไป </h3>
+														<h3>ข้อมูลทั่วไป </h3>
 														<div class="col-sm-4">
 															<label for="is_require_room" class="control-label">ชื่อ:</label>&nbsp;&nbsp;
 															<!-- <div class="radio col-sm-6"> -->
@@ -118,4 +118,13 @@
 		</section>
 	</div>
 
+	<div class="container">
+		<h3>Popover Example</h3>
+		<a class="btn btn-success" href="#" data-toggle="popover" data-placement="top" title="Popover Header" data-content="Some content inside the popover">Toggle popover</a>
+	</div>
 	<?php $this->load->view('footer');?>
+	<script>
+		$(document).ready(function(){
+			$('[data-toggle="popover"]').popover('onclick');
+		});
+	</script>
