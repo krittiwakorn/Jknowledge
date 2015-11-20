@@ -79,12 +79,34 @@ class Registration extends CI_Controller
 	public function manageMember()
 	{
 		$this->load->view('member');
+
+	}
+
+	public function insertMember()
+	{
+		$this->Mo_regis->insertMember();
+		$this->manageMember();
 	}
 
 	public function manageMember_info()
 	{
-		$data = array('get_users' => $this->db->get('users')->result());
+		$data = array(
+			'get_member' => $this->db->get('member')->result(),
+			);
 		$this->load->view('member_info',$data);
+	}
+
+	public function updateMember()
+	{
+		$this->Mo_regis->updateMember();
+		$this->manageMember_info();
+	}
+
+	public function delMember($value='')
+	{
+		$this->db->where('id_member',$value);
+		$this->db->delete('member');
+		$this->manageMember_info();
 	}
 
 	public function manageStatus()
@@ -98,6 +120,12 @@ class Registration extends CI_Controller
 			$update_status = $this->Mo_regis->manageStatus($status = "user");
 			echo $update_status;
 		}
+	}
+
+	public function updateReport()
+	{
+		$this->Mo_regis->updateReport();
+		$this->report();
 	}
 
 	public function report($report_hdr_id = " ")
@@ -129,19 +157,6 @@ class Registration extends CI_Controller
 	{
 		$this->load->view('member_info');
 	}
-
-	// public function pdf()
-	// {
-
-	// 	$this->pdf->AddPage();
-	// 	$this->pdf->AddFont('THSarabun','','THSarabun.php');
-	// 	$this->pdf->SetFont('THSarabun','',30);
-	// 	$this->pdf->Cell(40,10,iconv('UTF-8','TIS-620','hellow<br/>'),0,1,"C");
-	// 	$this->pdf->Write(5,$html);
-	// 	$this->pdf->Output('test.pdf',"I");
-
-
-	// }
 
 	public function Login()
 	{

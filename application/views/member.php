@@ -1,6 +1,6 @@
 <?php $this->load->view('header');?>
 
-<div class="row">
+<div class="container">
 	<div class="panel panel-primary">
 		<div class="panel-heading">	เพิ่มผู้ดูแลระบบ	</div>
 		<div class="panel-body">
@@ -9,50 +9,50 @@
 			<div class="form-group col-sm-12 well ">
 				<h3>ข้อมูลใช้ Login </h3>
 				<div class="col-sm-6">
-					<label for="is_type" class="control-label">Username:</label>
-					<input type="text" class="form-control" id="is_type" name="is_type" />
+					<label for="username" class="control-label">Username:</label>
+					<input type="text" class="form-control" id="username" name="username" />
 				</div>
 				<div class="col-sm-6">
-					<label for="memp_code" class="control-label">Password:</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
+					<label for="password" class="control-label">Password:</label>
+					<input type="password" class="form-control" id="password" name="password" />
 				</div>
 			</div>
 			<h3>ข้อมูลทั่วไป </h3>
 			<div class="form-group col-sm-12  ">
 				<div class="col-sm-4">
-					<label for="is_require_room" class="control-label">ชื่อ:</label>&nbsp;&nbsp;
+					<label for="firstname" class="control-label">ชื่อ:</label>&nbsp;&nbsp;
 					<!-- <div class="radio col-sm-6"> -->
 					<label >
-						<input type="radio" name="is_require_room" id="room_1" value="1"  checked/>
+						<input type="radio" name="is_iti" id="is_iti_1" value="1"  checked/>
 						นาย
 					</label>
 					<label >
-						<input type="radio" name="is_require_room" id="room_0" value="0"/>
+						<input type="radio" name="is_iti" id="is_iti_2" value="2"/>
 						นางสาว
 					</label>
 					<label >
-						<input type="radio" name="is_require_room" id="room_0" value="0"/>
+						<input type="radio" name="is_iti" id="is_iti_3" value="3"/>
 						นาง
 					</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
+					<input type="text" class="form-control" id="firstname" name="firstname" />
 				</div>
 				<div class="col-sm-4">
-					<label for="memp_code" class="control-label">นามสกุล:</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
+					<label for="lastname" class="control-label">นามสกุล:</label>
+					<input type="text" class="form-control" id="lastname" name="lastname" />
 				</div>
 				<div class="col-sm-4">
-					<label for="is_type" class="control-label">อีเมลล์:</label>
-					<input type="text" class="form-control" id="is_type" name="is_type" />
+					<label for="email" class="control-label">อีเมลล์:</label>
+					<input type="email" class="form-control" id="email" name="email" />
 				</div>
 			</div>
 			<div class="form-group col-sm-12  ">
 				<div class="col-sm-4">
-					<label for="memp_code" class="control-label">เบอร์โทร:</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
+					<label for="line_id" class="control-label">เบอร์โทร:</label>
+					<input type="text" class="form-control" id="line_id" name="line_id" />
 				</div>
 				<div class="col-sm-4">
-					<label for="memp_code" class="control-label">มือถือ:</label>
-					<input type="text" class="form-control" id="memp_code" name="memp_code" />
+					<label for="mobile" class="control-label">มือถือ:</label>
+					<input type="text" class="form-control" id="mobile" name="mobile" />
 				</div>
 				<div class="col-sm-4">
 					<label for="comment" class=" control-label">หมายเหตุ:</label>

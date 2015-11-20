@@ -11301,7 +11301,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sEmptyTable": "No data available in table",
+			"sEmptyTable": "===== ไม่พบรายการ =====",
 
 
 			/**

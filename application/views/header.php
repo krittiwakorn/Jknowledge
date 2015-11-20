@@ -73,4 +73,4 @@
           <!-- /.container -->
      </nav>
      <!-- Page Content -->
-     <div class="container">
+     <div class="row ">

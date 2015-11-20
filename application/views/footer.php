@@ -21,7 +21,7 @@
 <script src="<?php echo base_url();?>js/bootstrap-switch/bootstrap-switch.js"></script>
 
 <!-- Bootstrap Confirme -->
-<!--<script type="text/javascript" src="path/to/bootstrap-confirmation.js"></script>-->
+<script type="text/javascript" src="<?php echo base_url();?>js/bootstrap-confirmation.js"></script>
 
 </body>
 

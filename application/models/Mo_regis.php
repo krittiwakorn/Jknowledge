@@ -9,8 +9,70 @@ class Mo_regis extends CI_Model {
 		date_default_timezone_set('Asia/Bangkok');
 	}
 
+	public function insertMember()
+	{
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$is_iti = $this->input->post('is_iti');
+		$firstname = $this->input->post('firstname');
+		$lastname = $this->input->post('lastname');
+		$email = $this->input->post('email');
+		$line_id = $this->input->post('line_id');
+		$mobile = $this->input->post('mobile');
+		$comment = $this->input->post('comment');
+
+		$data_member = array(
+			'is_type' => '',
+			'is_iti' => $is_iti,
+			'memp_code' => '',
+			'firstname' => $firstname,
+			'lastname' => $lastname,
+			'email' => $email,
+			'line_id' => $line_id,
+			'mobile' => $mobile,
+			'username' => $username,
+			'password' =>$password,
+			'comment' => $comment,
+			'status' => '1',
+			);
+		$this->db->insert('member',$data_member);
+		return TRUE;
+	}
+
+	public function updateMember()
+	{
+		$id_member = $this->input->post('id_member');
+		$username = $this->input->post('username');
+		$password = $this->input->post('password');
+		$is_iti = $this->input->post('is_iti');
+		$firstname = $this->input->post('firstname');
+		$lastname = $this->input->post('lastname');
+		$email = $this->input->post('email');
+		$line_id = $this->input->post('line_id');
+		$mobile = $this->input->post('mobile');
+		$comment = $this->input->post('comment');
+
+		$update_member = array(
+			'is_type' => '',
+			'is_iti' => $is_iti,
+			'memp_code' => '',
+			'firstname' => $firstname,
+			'lastname' => $lastname,
+			'email' => $email,
+			'line_id' => $line_id,
+			'mobile' => $mobile,
+			'username' => $username,
+			'password' =>$password,
+			'comment' => $comment,
+			'status' => '1',
+			);
+		$this->db->where('id_member',$id_member);
+		$this->db->update('member',$update_member);
+		return TRUE;
+	}
+
 	function insertCourse(){  // เพิ่มคอร์สเรียน
-		
+
 		$course_name = $this->input->post('course_name');
 		$course_price = $this->input->post('course_price');
 		$is_require_room = $this->input->post('is_require_room');
@@ -113,6 +175,13 @@ class Mo_regis extends CI_Model {
 			WHERE course.id_course ="'.$value.'"
 			')->result();
 		return $reprtByCourse;
+	}
+
+	public function updateReport()
+	{
+		$this->db->where('id_register_hdr',$this->input->post('id_hdr'));
+		$this->db->update('register_hdr',array('status'=>'5'));
+		return TRUE;
 	}
 
 
